@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import myPhoto from "./image.jpg";
 
 export const Container = styled.aside`
@@ -72,7 +72,12 @@ export const Button = styled.button`
     background-color: ${({ theme }) => theme.colors.dodgerBlue};
   }
 `;
-
+export const List = styled.ul`
+  display: grid;
+  grid-gap: 8px;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+`;
 export const Item = styled.li`
   font-size: 18px;
   line-height: 1.4;
