@@ -11,7 +11,7 @@ export const theme = {
     scienceBlue: "#0366D6",
     dodgerBlue: "#2188FF",
   },
-  breakpionts: {
-    mobileMAx: 768,
+  breakpoints: {
+    mobileMax: 812,
   },
 };

@@ -14,7 +14,9 @@ export const Container = styled.aside`
   border-radius: 4px;
   border: 6px solid rgba(209, 213, 218, 0.3);
   width: 100%;
-
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    grid-template-rows: auto;
+  }
   ${(props) =>
     props.introducingYourself &&
     css`
@@ -25,6 +27,12 @@ export const Container = styled.aside`
       box-shadow: none;
       border: none;
       width: auto;
+      @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+        grid-template-areas:
+          "photo"
+          "title"
+          "content";
+      }
     `}
   ${(props) =>
     props.myGithubProjects &&
@@ -51,6 +59,10 @@ export const Photo = styled.div`
   height: 398px;
   border-radius: 100%;
   margin-right: 66px;
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    width: 132.67px;
+    height: 132.67px;
+  }
 `;
 export const Inset = styled.h1`
   font-size: 12px;
@@ -130,13 +142,15 @@ export const List = styled.ul`
   grid-gap: 8px;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    grid-template-columns: none;
+  }
   ${(props) =>
     props.myGithubProjects &&
     css`
       grid-template-columns: none;
       grid-template-rows: 1fr 1fr;
       list-style: none;
-
       padding: 0px;
     `}
 `;
