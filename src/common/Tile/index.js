@@ -10,6 +10,11 @@ import {
   Item,
   Inset,
 } from "./styled";
+import message from "../Assets/message.svg";
+import githubIcon from "../Assets/github.svg";
+import linkedinIcon from "../Assets/linkedin.svg";
+import facebookIcon from "../Assets/facebook.svg";
+import instagramIcon from "../Assets/instagram.svg";
 import { mySkilles, skillsIWantToLearn } from "./arraysWithSkills";
 
 const Tile = ({
@@ -49,7 +54,10 @@ const Tile = ({
                       sed diam nonumy eirmod tempor invidunt ut labore et dolore
                       magna aliquyam erat, sed diam voluptua.
                     </Description>
-                    <Button>Hire me</Button>
+                    <Button>
+                      {" "}
+                      <img src={message} alt=""></img> Hire me
+                    </Button>
                   </>
                 );
 
@@ -106,6 +114,20 @@ const Tile = ({
                       gubergren, no sea takimata sanctus est Lorem ipsum dolor
                       sit amet.
                     </Description>
+                    <List contact={contact}>
+                      <Item>
+                        <img src={githubIcon} alt=""></img>
+                      </Item>
+                      <Item>
+                        <img src={facebookIcon} alt=""></img>
+                      </Item>
+                      <Item>
+                        <img src={linkedinIcon} alt=""></img>
+                      </Item>
+                      <Item>
+                        <img src={instagramIcon} alt=""></img>
+                      </Item>
+                    </List>
                   </>
                 );
             }

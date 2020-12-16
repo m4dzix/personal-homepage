@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import myPhoto from "./image.jpg";
+import roundListStyle from "../Assets/roundListStyle.svg";
 
 export const Container = styled.aside`
   display: grid;
@@ -120,6 +121,7 @@ export const Description = styled.p`
 `;
 export const Button = styled.button`
   font-weight: 600;
+  width: 154px;
   font-size: 20.0584px;
   line-height: 24px;
   padding: 16px 18px;
@@ -127,7 +129,7 @@ export const Button = styled.button`
   color: ${({ theme }) => theme.colors.white};
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   border: 1px solid rgba(209, 213, 218, 0.3);
   border-radius: 4px;
@@ -142,6 +144,7 @@ export const List = styled.ul`
   grid-gap: 8px;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
+  list-style-image: url(${roundListStyle});
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     grid-template-columns: none;
   }
@@ -152,6 +155,17 @@ export const List = styled.ul`
       grid-template-rows: 1fr 1fr;
       list-style: none;
       padding: 0px;
+      width: auto;
+    `}
+  ${(props) =>
+    props.contact &&
+    css`
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: none;
+      list-style: none;
+      padding: 0px;
+      grid-gap: 24px;
+      width: auto;
     `}
 `;
 export const Item = styled.li`
