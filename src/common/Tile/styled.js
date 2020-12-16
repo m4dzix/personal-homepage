@@ -1,13 +1,45 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import myPhoto from "./image.jpg";
 
 export const Container = styled.aside`
   display: grid;
   grid-template-rows: auto 1fr;
   grid-template-areas:
-    "photo title"
-    "photo content";
+    "title"
+    "content";
   padding: 32px;
+  background-color: ${({ theme }) => theme.colors.white};
+  box-shadow: 0px -2px 50px rgba(9, 10, 51, 0.02),
+    0px 16px 58px rgba(9, 10, 51, 0.03);
+  border-radius: 4px;
+  border: 6px solid rgba(209, 213, 218, 0.3);
+  width: 100%;
+
+  ${(props) =>
+    props.introducingYourself &&
+    css`
+      grid-template-areas:
+        "photo title"
+        "photo content";
+      background-color: transparent;
+      box-shadow: none;
+      border: none;
+      width: auto;
+    `}
+  ${(props) =>
+    props.myGithubProjects &&
+    css`
+      padding: 50px;
+    `}
+  ${(props) =>
+    props.contact &&
+    css`
+      grid-template-areas:
+        "title "
+        "content ";
+      width: 100%;
+      max-width: 670px;
+    `}
 `;
 export const Photo = styled.div`
   grid-area: photo;
@@ -33,8 +65,23 @@ export const Title = styled.h1`
   font-size: 30px;
   line-height: 36px;
   letter-spacing: 0.05em;
-  margin: 0;
+  margin-bottom: 0px;
   padding-bottom: 15px;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.mercury};
+  ${(props) =>
+    props.introducingYourself &&
+    css`
+      padding-bottom: 0;
+      border-bottom: none;
+    `}
+  ${(props) =>
+    props.myGithubProjects &&
+    css`
+      color: ${({ theme }) => theme.colors.scienceBlue};
+      font-size: 24px;
+      border-bottom: none;
+      padding-bottom: 0;
+    `}
 `;
 export const ContentContainer = styled.div`
   grid-area: content;
@@ -51,7 +98,13 @@ export const Description = styled.p`
   line-height: 1.4;
   letter-spacing: 0.05em;
   color: ${({ theme }) => theme.colors.slateGray};
-  margin-top: 35px;
+  margin: 35px 0 0 0;
+  ${(props) =>
+    props.myGithubProjects &&
+    css`
+      font-size: 18px;
+      margin-top: 24px;
+    `}
 `;
 export const Button = styled.button`
   font-weight: 600;
@@ -77,6 +130,15 @@ export const List = styled.ul`
   grid-gap: 8px;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
+  ${(props) =>
+    props.myGithubProjects &&
+    css`
+      grid-template-columns: none;
+      grid-template-rows: 1fr 1fr;
+      list-style: none;
+
+      padding: 0px;
+    `}
 `;
 export const Item = styled.li`
   font-size: 18px;

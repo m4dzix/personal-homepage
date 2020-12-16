@@ -2,42 +2,46 @@ import React from "react";
 import {
   Container,
   Photo,
-  Inset,
   Title,
   ContentContainer,
   Description,
   Button,
   List,
   Item,
+  Inset,
 } from "./styled";
-import { mySkilles, SkillsIWantToLearn } from "./arraysWithSkills";
+import { mySkilles, skillsIWantToLearn } from "./arraysWithSkills";
 
 const Tile = ({
   inset,
   title,
   typeOfContent,
-  IntroducingYourself,
+  introducingYourself,
   contact,
-  MyGithubProjects,
+  myGithubProjects,
 }) => {
   return (
     <>
       <Container
-        IntroducingYourself={IntroducingYourself}
+        introducingYourself={introducingYourself}
         contact={contact}
-        MyGithubProjects={MyGithubProjects}
+        myGithubProjects={myGithubProjects}
       >
-        <Photo hidden={typeOfContent !== "IntroducingYourself"}></Photo>
+        <Photo hidden={typeOfContent !== "introducingYourself"}></Photo>
         <div>
           <Inset>{inset}</Inset>
-          <Title MyGithubProjects={MyGithubProjects} contact={contact}>
+          <Title
+            introducingYourself={introducingYourself}
+            myGithubProjects={myGithubProjects}
+            contact={contact}
+          >
             {title}
           </Title>
         </div>
         <ContentContainer>
           {(() => {
             switch (typeOfContent) {
-              case "IntroducingYourself":
+              case "introducingYourself":
                 return (
                   <>
                     <Description>
@@ -57,24 +61,23 @@ const Tile = ({
                     ))}
                   </List>
                 );
-              case "SkillsIWantToLearn":
+              case "skillsIWantToLearn":
                 return (
                   <List>
-                    {SkillsIWantToLearn.map((skill) => (
+                    {skillsIWantToLearn.map((skill) => (
                       <Item key={skill}>{skill}</Item>
                     ))}
                   </List>
                 );
-              case "MyGithubProjects":
+              case "myGithubProjects":
                 return (
                   <>
-                    <Description>
-                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                      sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                      magna aliquyam erat, sed diam voluptua. At vero eos et
-                      accusam et justo duo dolores et ea rebum.
+                    <Description myGithubProjects={myGithubProjects}>
+                      Project description, e.g. website where you can search for
+                      favourite movies and people. Project description, e.g.
+                      website where you can search.
                     </Description>
-                    <List MyGithubProjects={MyGithubProjects}>
+                    <List myGithubProjects={myGithubProjects}>
                       <Item>
                         {" "}
                         Demo:{" "}

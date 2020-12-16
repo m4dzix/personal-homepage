@@ -9,9 +9,10 @@ function App() {
       <Section
         body={
           <Tile
+            introducingYourself={true}
             inset={"this is"}
             title={"Magdalena Chęciński"}
-            typeOfContent={"IntroducingYourself"}
+            typeOfContent={"introducingYourself"}
           ></Tile>
         }
       ></Section>
@@ -25,29 +26,34 @@ function App() {
             ></Tile>{" "}
             <Tile
               title={"Skills I want to learn"}
-              typeOfContent={"SkillsIWantToLearn"}
+              typeOfContent={"skillsIWantToLearn"}
             ></Tile>
           </>
         }
       ></Section>
       <Section
+        myGithubProjects={true}
         body={
           <>
             <Tile
+              myGithubProjects={true}
               title={"Movies Browser"}
-              typeOfContent={"MyGithubProjects"}
+              typeOfContent={"myGithubProjects"}
             ></Tile>
             <Tile
+              myGithubProjects={true}
               title={"Movies Browser"}
-              typeOfContent={"MyGithubProjects"}
+              typeOfContent={"myGithubProjects"}
             ></Tile>
             <Tile
+              myGithubProjects={true}
               title={"Movies Browser"}
-              typeOfContent={"MyGithubProjects"}
+              typeOfContent={"myGithubProjects"}
             ></Tile>
             <Tile
+              myGithubProjects={true}
               title={"Movies Browser"}
-              typeOfContent={"MyGithubProjects"}
+              typeOfContent={"myGithubProjects"}
             ></Tile>
           </>
         }
@@ -55,6 +61,8 @@ function App() {
       <Section
         body={
           <Tile
+            introducingYourself={true}
+            contact={true}
             inset={"let's talk!"}
             title={
               <a href="mailto:madlen.checinski@gmail.com">

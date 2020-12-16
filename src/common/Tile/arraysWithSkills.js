@@ -15,7 +15,7 @@ export const mySkilles = [
   "GitHub Pull Request & Review",
   "Scrum",
 ];
-export const SkillsIWantToLearn = [
+export const skillsIWantToLearn = [
   "React Context",
   "TypeScript",
   "Gatsby",
