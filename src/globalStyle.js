@@ -11,6 +11,6 @@ html{
 
 body {
  font-family: 'Inter', sans-serif;
- background-color: ${({ theme }) => theme.colors.alabaster};
+ background-color: ${({ theme }) => theme.colors.whiteLilac};
 }
 `;
