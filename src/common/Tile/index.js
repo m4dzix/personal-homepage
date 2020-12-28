@@ -9,6 +9,7 @@ import {
   List,
   Item,
   Inset,
+  Icon,
 } from "./styled";
 import message from "../Assets/message.svg";
 import githubIcon from "../Assets/github.svg";
@@ -55,7 +56,6 @@ const Tile = ({
                       magna aliquyam erat, sed diam voluptua.
                     </Description>
                     <Button>
-                      {" "}
                       <img src={message} alt=""></img> Hire me
                     </Button>
                   </>
@@ -116,16 +116,19 @@ const Tile = ({
                     </Description>
                     <List contact={contact}>
                       <Item>
-                        <img src={githubIcon} alt=""></img>
+                        <Icon src={githubIcon} alt=""></Icon>
                       </Item>
                       <Item>
-                        <img src={facebookIcon} alt=""></img>
+                        {" "}
+                        <Icon src={facebookIcon} alt=""></Icon>
                       </Item>
                       <Item>
-                        <img src={linkedinIcon} alt=""></img>
+                        {" "}
+                        <Icon src={linkedinIcon} alt=""></Icon>
                       </Item>
                       <Item>
-                        <img src={instagramIcon} alt=""></img>
+                        {" "}
+                        <Icon src={instagramIcon} alt=""></Icon>
                       </Item>
                     </List>
                   </>

@@ -163,9 +163,13 @@ export const List = styled.ul`
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: none;
       list-style: none;
+      margin-top: 50px;
       padding: 0px;
       grid-gap: 24px;
       width: auto;
+      @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
     `}
 `;
 export const Item = styled.li`
@@ -173,4 +177,11 @@ export const Item = styled.li`
   line-height: 1.4;
   letter-spacing: 0.05em;
   color: ${({ theme }) => theme.colors.slateGray};
+`;
+export const Icon = styled.img`
+  filter: invert(10%) sepia(0%) saturate(0%) hue-rotate(329deg) brightness(50%)
+    contrast(100%);
+  &:hover {
+    filter: none;
+  }
 `;
