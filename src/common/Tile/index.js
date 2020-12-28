@@ -9,6 +9,7 @@ import {
   List,
   Item,
   Inset,
+  Link,
   Icon,
 } from "./styled";
 import message from "../Assets/message.svg";
@@ -55,9 +56,12 @@ const Tile = ({
                       sed diam nonumy eirmod tempor invidunt ut labore et dolore
                       magna aliquyam erat, sed diam voluptua.
                     </Description>
-                    <Button>
-                      <img src={message} alt=""></img> Hire me
-                    </Button>
+                    <a href="mailto:madlen.checinski@gmail.com">
+                      {" "}
+                      <Button>
+                        <img src={message} alt=""></img> Hire me
+                      </Button>
+                    </a>
                   </>
                 );
 
@@ -89,15 +93,15 @@ const Tile = ({
                       <Item>
                         {" "}
                         Demo:{" "}
-                        <a href="https://m4dzix.github.io/movies-browser/">
+                        <Link href="https://m4dzix.github.io/movies-browser/">
                           https://m4dzix.github.io/movies-browser/
-                        </a>
+                        </Link>
                       </Item>
                       <Item>
                         Live:{" "}
-                        <a href="https://m4dzix.github.io/movies-browser/">
+                        <Link href="https://m4dzix.github.io/movies-browser/">
                           https://m4dzix.github.io/movies-browser/
-                        </a>
+                        </Link>
                       </Item>
                     </List>
                   </>
@@ -116,19 +120,27 @@ const Tile = ({
                     </Description>
                     <List contact={contact}>
                       <Item>
-                        <Icon src={githubIcon} alt=""></Icon>
+                        <a href="https//google.pl">
+                          <Icon src={githubIcon} alt=""></Icon>
+                        </a>
                       </Item>
                       <Item>
-                        {" "}
-                        <Icon src={facebookIcon} alt=""></Icon>
+                        <a href="https//google.pl">
+                          {" "}
+                          <Icon src={facebookIcon} alt=""></Icon>
+                        </a>
                       </Item>
                       <Item>
-                        {" "}
-                        <Icon src={linkedinIcon} alt=""></Icon>
+                        <a href="https//google.pl">
+                          {" "}
+                          <Icon src={linkedinIcon} alt=""></Icon>
+                        </a>{" "}
                       </Item>
                       <Item>
-                        {" "}
-                        <Icon src={instagramIcon} alt=""></Icon>
+                        <a href="https//google.pl">
+                          {" "}
+                          <Icon src={instagramIcon} alt=""></Icon>
+                        </a>{" "}
                       </Item>
                     </List>
                   </>

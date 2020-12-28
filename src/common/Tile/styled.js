@@ -185,3 +185,7 @@ export const Icon = styled.img`
     filter: none;
   }
 `;
+export const Link = styled.a`
+  color: ${({ theme }) => theme.colors.scienceBlue};
+  border-bottom: 1px solid rgba(3, 103, 216, 0.2);
+`;

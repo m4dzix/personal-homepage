@@ -13,4 +13,12 @@ body {
  font-family: 'Inter', sans-serif;
  background-color: ${({ theme }) => theme.colors.whiteLilac};
 }
+
+a {
+color: ${({ theme }) => theme.colors.mineShaft};
+text-decoration: none;
+  &:hover {
+    color: ${({ theme }) => theme.colors.scienceBlue};
+  }
+}
 `;
