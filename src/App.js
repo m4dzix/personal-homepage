@@ -32,6 +32,16 @@ function App() {
         }
       ></Section>
       <Section
+        portfolio={true}
+        body={
+          <Tile
+            portfolio={true}
+            title={"Portfolio"}
+            typeOfContent={"portfolio"}
+          ></Tile>
+        }
+      ></Section>
+      <Section
         myGithubProjects={true}
         body={
           <>

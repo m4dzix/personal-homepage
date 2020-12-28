@@ -13,4 +13,10 @@ export const StyledSection = styled.section`
         grid-template-columns: none;
       }
     `};
+  ${(props) =>
+    props.portfolio &&
+    css`
+      align-items: center;
+      justify-content: center;
+    `};
 `;

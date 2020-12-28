@@ -36,6 +36,15 @@ export const Container = styled.aside`
       }
     `}
   ${(props) =>
+    props.portfolio &&
+    css`
+      background-color: transparent;
+      box-shadow: none;
+      border: none;
+      justify-items: center;
+      padding: 0px;
+    `}
+  ${(props) =>
     props.myGithubProjects &&
     css`
       padding: 50px;
@@ -65,11 +74,16 @@ export const Photo = styled.div`
     height: 132.67px;
   }
 `;
-export const Inset = styled.h1`
+export const Inset = styled.h3`
   font-size: 12px;
   line-height: 130%;
   text-transform: uppercase;
   color: ${({ theme }) => theme.colors.slateGray};
+  ${(props) =>
+    props.portfolio &&
+    css`
+      text-align: center;
+    `}
 `;
 export const Title = styled.h1`
   grid-area: title;
@@ -85,6 +99,12 @@ export const Title = styled.h1`
     props.introducingYourself &&
     css`
       padding-bottom: 0;
+      border-bottom: none;
+    `}
+  ${(props) =>
+    props.portfolio &&
+    css`
+      padding-bottom: 0px;
       border-bottom: none;
     `}
   ${(props) =>
@@ -187,5 +207,14 @@ export const Icon = styled.img`
 `;
 export const Link = styled.a`
   color: ${({ theme }) => theme.colors.scienceBlue};
+  line-height: 140%;
+  padding: 2px;
   border-bottom: 1px solid rgba(3, 103, 216, 0.2);
+`;
+export const Subheader = styled.h2`
+  font-size: 20px;
+  line-height: 1.4;
+  color: ${({ theme }) => theme.colors.mineShaft};
+  margin-top: 8px;
+  font-weight: normal;
 `;

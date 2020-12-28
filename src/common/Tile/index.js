@@ -11,6 +11,7 @@ import {
   Inset,
   Link,
   Icon,
+  Subheader,
 } from "./styled";
 import message from "../Assets/message.svg";
 import githubIcon from "../Assets/github.svg";
@@ -25,6 +26,7 @@ const Tile = ({
   typeOfContent,
   introducingYourself,
   contact,
+  portfolio,
   myGithubProjects,
 }) => {
   return (
@@ -32,13 +34,21 @@ const Tile = ({
       <Container
         introducingYourself={introducingYourself}
         contact={contact}
+        portfolio={portfolio}
         myGithubProjects={myGithubProjects}
       >
         <Photo hidden={typeOfContent !== "introducingYourself"}></Photo>
         <div>
-          <Inset>{inset}</Inset>
+          <Inset portfolio={portfolio}>
+            {typeOfContent !== "portfolio" ? (
+              inset
+            ) : (
+              <img src={githubIcon} alt=""></img>
+            )}
+          </Inset>
           <Title
             introducingYourself={introducingYourself}
+            portfolio={portfolio}
             myGithubProjects={myGithubProjects}
             contact={contact}
           >
@@ -81,6 +91,8 @@ const Tile = ({
                     ))}
                   </List>
                 );
+              case "portfolio":
+                return <Subheader>My recent projects</Subheader>;
               case "myGithubProjects":
                 return (
                   <>
