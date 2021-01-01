@@ -24,7 +24,7 @@ const Tile = ({
   inset,
   title,
   typeOfContent,
-  introducingYourself,
+  aboutMe,
   contact,
   portfolio,
   myGithubProjects,
@@ -32,12 +32,12 @@ const Tile = ({
   return (
     <>
       <Container
-        introducingYourself={introducingYourself}
+        aboutMe={aboutMe}
         contact={contact}
         portfolio={portfolio}
         myGithubProjects={myGithubProjects}
       >
-        <Photo hidden={typeOfContent !== "introducingYourself"}></Photo>
+        <Photo hidden={typeOfContent !== "aboutMe"}></Photo>
         <div>
           <Inset portfolio={portfolio}>
             {typeOfContent !== "portfolio" ? (
@@ -47,7 +47,7 @@ const Tile = ({
             )}
           </Inset>
           <Title
-            introducingYourself={introducingYourself}
+            aboutMe={aboutMe}
             portfolio={portfolio}
             myGithubProjects={myGithubProjects}
             contact={contact}
@@ -58,7 +58,7 @@ const Tile = ({
         <ContentContainer>
           {(() => {
             switch (typeOfContent) {
-              case "introducingYourself":
+              case "aboutMe":
                 return (
                   <>
                     <Description>
@@ -107,13 +107,13 @@ const Tile = ({
                         Demo:{" "}
                         <Link href="https://m4dzix.github.io/movies-browser/">
                           https://m4dzix.github.io/movies-browser/
-                        </Link>
+                        </Link>{" "}
                       </Item>
                       <Item>
                         Live:{" "}
                         <Link href="https://m4dzix.github.io/movies-browser/">
                           https://m4dzix.github.io/movies-browser/
-                        </Link>
+                        </Link>{" "}
                       </Item>
                     </List>
                   </>

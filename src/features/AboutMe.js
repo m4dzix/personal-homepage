@@ -7,10 +7,10 @@ const AboutMe = () => {
     <Section
       body={
         <Tile
-          introducingYourself={true}
+          aboutMe={true}
           inset={"this is"}
           title={"Magdalena Chęciński"}
-          typeOfContent={"introducingYourself"}
+          typeOfContent={"aboutMe"}
         ></Tile>
       }
     ></Section>

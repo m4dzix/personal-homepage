@@ -19,7 +19,7 @@ export const Container = styled.aside`
     grid-template-rows: auto;
   }
   ${(props) =>
-    props.introducingYourself &&
+    props.aboutMe &&
     css`
       grid-template-areas:
         "photo title"
@@ -96,7 +96,7 @@ export const Title = styled.h1`
   padding-bottom: 15px;
   border-bottom: 1px solid ${({ theme }) => theme.colors.mercury};
   ${(props) =>
-    props.introducingYourself &&
+    props.aboutMe &&
     css`
       padding-bottom: 0;
       border-bottom: none;

@@ -7,7 +7,7 @@ const Contact = () => {
     <Section
       body={
         <Tile
-          introducingYourself={true}
+          aboutMe={true}
           contact={true}
           inset={"let's talk!"}
           title={
