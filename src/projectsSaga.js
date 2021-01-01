@@ -5,7 +5,7 @@ import {
   fetchProject,
   fetchProjectSuccess,
   fetchProjectError,
-} from "./projsctsSlice";
+} from "./projectsSlice";
 
 function* fetchProjectHandler() {
   try {
