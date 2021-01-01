@@ -9,7 +9,7 @@ import {
 
 function* fetchProjectHandler() {
   try {
-    delay(500);
+    yield delay(1500);
     const project = yield call(getProject);
     yield put(fetchProjectSuccess(project));
   } catch (error) {

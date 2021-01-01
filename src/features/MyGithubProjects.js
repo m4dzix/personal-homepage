@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { selectProject, selectLoading, fetchProject } from "../projectsSlice";
 import Section from "../common/Section";
 import Tile from "../common/Tile";
+import Loading from "../common/Loading";
 
 const MyGithubProjects = () => {
   const projects = useSelector(selectProject);
@@ -32,7 +33,7 @@ const MyGithubProjects = () => {
       ></Section>
     );
   } else if (!!loading) {
-    return <p>Loading</p>;
+    return <Loading />;
   } else if (!loading && !!projects) {
     return <p>No results</p>;
   } else {
