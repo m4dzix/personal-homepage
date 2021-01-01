@@ -1,5 +1,7 @@
+// import { owner, projectNames } from "./fetchFromApi";
+
 export const getProject = async () => {
-  const api = `https://api.github.com/repos/m4dzix/movies-browser`;
+  const api = `https://api.github.com/users/m4dzix/repos`;
 
   const response = await fetch(api);
 
