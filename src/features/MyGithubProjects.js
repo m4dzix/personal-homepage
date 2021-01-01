@@ -7,7 +7,6 @@ import Tile from "../common/Tile";
 const MyGithubProjects = () => {
   const projects = useSelector(selectProject);
   const loading = useSelector(selectLoading);
-  console.log(projects);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -16,30 +15,21 @@ const MyGithubProjects = () => {
 
   if (!loading && projects.length > 0) {
     return (
-      <>
-        <Section
-          portfolio={true}
-          body={
+      <Section
+        myGithubProjects={true}
+        body={projects.map((project) => {
+          return (
             <Tile
-              portfolio={true}
-              title={"Portfolio"}
-              typeOfContent={"portfolio"}
-            ></Tile>
-          }
-        ></Section>
-        <Section
-          myGithubProjects={true}
-          body={projects.map((project) => {
-            <Tile
+              key={project.name}
               myGithubProjects={true}
               title={project.name}
               typeOfContent={"myGithubProjects"}
               urlAdressToDemo={project.html_url}
               urlAdressToLive={`https://${project.owner.login}.github.io/${project.name}/`}
-            ></Tile>;
-          })}
-        ></Section>
-      </>
+            ></Tile>
+          );
+        })}
+      ></Section>
     );
   } else if (!!loading) {
     return <p>Loading</p>;
