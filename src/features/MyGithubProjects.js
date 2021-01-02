@@ -4,6 +4,7 @@ import { selectProject, selectLoading, fetchProject } from "../projectsSlice";
 import Section from "../common/Section";
 import Tile from "../common/Tile";
 import Loading from "../common/Loading";
+import Error from "../common/Error";
 
 const MyGithubProjects = () => {
   const projects = useSelector(selectProject);
@@ -34,10 +35,8 @@ const MyGithubProjects = () => {
     );
   } else if (!!loading) {
     return <Loading />;
-  } else if (!loading && !!projects) {
-    return <p>No results</p>;
   } else {
-    return <p>ERROR</p>;
+    return <Error />;
   }
 };
 
