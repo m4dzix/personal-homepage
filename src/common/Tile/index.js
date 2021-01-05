@@ -18,7 +18,7 @@ import githubIcon from "../Assets/github.svg";
 import linkedinIcon from "../Assets/linkedin.svg";
 import facebookIcon from "../Assets/facebook.svg";
 import instagramIcon from "../Assets/instagram.svg";
-import { mySkills, skillsIWantToLearn } from "./arraysWithSkills";
+import { MySkills, SkillsIWantToLearn } from "./arraysWithSkills";
 import { selectDarkMode } from "../../projectsSlice";
 import { useSelector } from "react-redux";
 
@@ -30,6 +30,8 @@ const Tile = ({
   contact,
   portfolio,
   myGithubProjects,
+  mySkills,
+  skillsIWantToLearn,
 }) => {
   const darkMode = useSelector(selectDarkMode);
   return (
@@ -54,6 +56,8 @@ const Tile = ({
             portfolio={portfolio}
             myGithubProjects={myGithubProjects}
             contact={contact}
+            mySkills={mySkills}
+            skillsIWantToLearn={skillsIWantToLearn}
           >
             {title}
           </Title>
@@ -81,7 +85,7 @@ const Tile = ({
               case "mySkills":
                 return (
                   <List>
-                    {mySkills.map((skill) => (
+                    {MySkills.map((skill) => (
                       <Item key={skill}>{skill}</Item>
                     ))}
                   </List>
@@ -89,7 +93,7 @@ const Tile = ({
               case "skillsIWantToLearn":
                 return (
                   <List>
-                    {skillsIWantToLearn.map((skill) => (
+                    {SkillsIWantToLearn.map((skill) => (
                       <Item key={skill}>{skill}</Item>
                     ))}
                   </List>

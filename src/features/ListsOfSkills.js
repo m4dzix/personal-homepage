@@ -9,10 +9,12 @@ const ListsOfSkills = () => {
         <>
           {" "}
           <Tile
+            mySkills={true}
             title={"My Skillset includes"}
             typeOfContent={"mySkills"}
           ></Tile>{" "}
           <Tile
+            skillsIWantToLearn={true}
             title={"Skills I want to learn"}
             typeOfContent={"skillsIWantToLearn"}
           ></Tile>

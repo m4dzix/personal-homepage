@@ -1,4 +1,4 @@
-export const mySkills = [
+export const MySkills = [
   "Semantic & accessible HTML",
   "Responsive Web Design",
   "Teamwork",
@@ -15,7 +15,7 @@ export const mySkills = [
   "GitHub Pull Request & Review",
   "Scrum",
 ];
-export const skillsIWantToLearn = [
+export const SkillsIWantToLearn = [
   "React Context",
   "TypeScript",
   "Gatsby",
