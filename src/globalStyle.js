@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, css } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 html{
@@ -11,14 +11,15 @@ html{
 
 body {
  font-family: 'Inter', sans-serif;
- background-color: ${({ theme }) => theme.colors.whiteLilac};
+ background-color: ${({ theme }) => theme.colors.background};
+
 }
 
 a {
-color: ${({ theme }) => theme.colors.mineShaft};
+color: ${({ theme }) => theme.colors.title};
 text-decoration: none;
-  &:hover {
-    color: ${({ theme }) => theme.colors.scienceBlue};
+&:hover {
+  color: ${({ theme }) => theme.colors.mainBlue};
   }
 }
 `;

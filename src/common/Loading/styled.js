@@ -17,7 +17,7 @@ export const Container = styled.div`
 
 export const Text = styled.p`
   font-size: 20px;
-  color: ${({ theme }) => theme.colors.mineShaft};
+  color: ${({ theme }) => theme.colors.title};
   margin-bottom: 88px;
 `;
 

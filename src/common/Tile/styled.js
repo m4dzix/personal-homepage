@@ -9,11 +9,11 @@ export const Container = styled.aside`
     "title"
     "content";
   padding: 32px;
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.boxColor};
   box-shadow: 0px -2px 50px rgba(9, 10, 51, 0.02),
     0px 16px 58px rgba(9, 10, 51, 0.03);
   border-radius: 4px;
-  border: 6px solid rgba(209, 213, 218, 0.3);
+
   width: 100%;
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     grid-template-rows: auto;
@@ -78,7 +78,7 @@ export const Inset = styled.h3`
   font-size: 12px;
   line-height: 130%;
   text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.slateGray};
+  color: ${({ theme }) => theme.colors.text};
   ${(props) =>
     props.portfolio &&
     css`
@@ -88,13 +88,13 @@ export const Inset = styled.h3`
 export const Title = styled.h1`
   grid-area: title;
   font-weight: 900;
-  color: ${({ theme }) => theme.colors.mineShaft};
+  color: ${({ theme }) => theme.colors.title};
   font-size: 30px;
   line-height: 36px;
   letter-spacing: 0.05em;
   margin-bottom: 0px;
   padding-bottom: 15px;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.mercury};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.darkLine};
   ${(props) =>
     props.aboutMe &&
     css`
@@ -110,7 +110,7 @@ export const Title = styled.h1`
   ${(props) =>
     props.myGithubProjects &&
     css`
-      color: ${({ theme }) => theme.colors.scienceBlue};
+      color: ${({ theme }) => theme.colors.mainBlue};
       font-size: 24px;
       border-bottom: none;
       padding-bottom: 0;
@@ -123,14 +123,14 @@ export const ContentContainer = styled.div`
   align-items: start;
   font-size: 18px;
   line-height: 1.4;
-  color: ${({ theme }) => theme.colors.slateGray};
+  color: ${({ theme }) => theme.colors.text};
   letter-spacing: 0.05em;
 `;
 export const Description = styled.p`
   font-size: 20px;
   line-height: 1.4;
   letter-spacing: 0.05em;
-  color: ${({ theme }) => theme.colors.slateGray};
+  color: ${({ theme }) => theme.colors.text};
   margin: 35px 0 0 0;
   ${(props) =>
     props.myGithubProjects &&
@@ -145,8 +145,8 @@ export const Button = styled.button`
   font-size: 20.0584px;
   line-height: 24px;
   padding: 16px 18px;
-  background-color: ${({ theme }) => theme.colors.scienceBlue};
-  color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.mainBlue};
+  color: #ffffff;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -156,7 +156,10 @@ export const Button = styled.button`
   margin-top: 32px;
   transition: 0.3;
   &:hover {
-    background-color: ${({ theme }) => theme.colors.dodgerBlue};
+    ${(props) =>
+      props.darkMode
+        ? "box-shadow: 2px -2px 0px #8CC2FF, -2px 2px 0px #8CC2FF, 2px 2px 0px #8CC2FF, -2px -2px 0px #8CC2FF;"
+        : "box-shadow: 2px -2px 0px #6D93BE, -2px 2px 0px #6D93BE, 2px 2px 0px #6D93BE, -2px -2px 0px #6D93BE;"};
   }
 `;
 export const List = styled.ul`
@@ -196,17 +199,19 @@ export const Item = styled.li`
   font-size: 18px;
   line-height: 1.4;
   letter-spacing: 0.05em;
-  color: ${({ theme }) => theme.colors.slateGray};
+  color: ${({ theme }) => theme.colors.text};
 `;
 export const Icon = styled.img`
-  filter: invert(10%) sepia(0%) saturate(0%) hue-rotate(329deg) brightness(50%)
-    contrast(100%);
+  filter: ${(props) =>
+    props.darkMode
+      ? "invert(0%) sepia(0%) saturate(0%) hue-rotate(329deg) brightness(500%) contrast(100%)"
+      : "invert(10%) sepia(0%) saturate(0%) hue-rotate(329deg) brightness(50%) contrast(100%)"};
   &:hover {
     filter: none;
   }
 `;
 export const Link = styled.a`
-  color: ${({ theme }) => theme.colors.scienceBlue};
+  color: ${({ theme }) => theme.colors.mainBlue};
   line-height: 140%;
   padding: 2px;
   border-bottom: 1px solid rgba(3, 103, 216, 0.2);
@@ -214,7 +219,7 @@ export const Link = styled.a`
 export const Subheader = styled.h2`
   font-size: 20px;
   line-height: 1.4;
-  color: ${({ theme }) => theme.colors.mineShaft};
+  color: ${({ theme }) => theme.colors.title};
   margin-top: 8px;
   font-weight: normal;
 `;

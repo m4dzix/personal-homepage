@@ -9,7 +9,7 @@ export const Container = styled.div`
 `;
 export const Text = styled.p`
   text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.slateGray};
+  color: ${({ theme }) => theme.colors.text};
   font-weight: bold;
   font-size: 12px;
   line-height: 1.3;
