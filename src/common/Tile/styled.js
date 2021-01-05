@@ -13,7 +13,6 @@ export const Container = styled.aside`
   box-shadow: 0px -2px 50px rgba(9, 10, 51, 0.02),
     0px 16px 58px rgba(9, 10, 51, 0.03);
   border-radius: 4px;
-
   width: 100%;
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     grid-template-rows: auto;
@@ -92,28 +91,25 @@ export const Title = styled.h1`
   font-size: 30px;
   line-height: 36px;
   letter-spacing: 0.05em;
-  margin-bottom: 0px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.darkLine};
+  padding-bottom: 0px;
   ${(props) =>
-    props.aboutMe &&
+    props.mySkills &&
     css`
-      padding-bottom: 0;
-      border-bottom: none;
+      padding-bottom: 15px;
+      border-bottom: 1px solid ${({ theme }) => theme.colors.lightLine};
     `}
   ${(props) =>
-    props.portfolio &&
+    props.skillsIWantToLearn &&
     css`
-      padding-bottom: 0px;
-      border-bottom: none;
+      padding-bottom: 15px;
+      border-bottom: 1px solid ${({ theme }) => theme.colors.darkLine};
     `}
+
   ${(props) =>
     props.myGithubProjects &&
     css`
       color: ${({ theme }) => theme.colors.mainBlue};
       font-size: 24px;
-      border-bottom: none;
-      padding-bottom: 0;
     `}
 `;
 export const ContentContainer = styled.div`
