@@ -14,10 +14,14 @@ import {
   Subheader,
 } from "./styled";
 import message from "../Assets/message.svg";
-import githubIcon from "../Assets/github.svg";
-import linkedinIcon from "../Assets/linkedin.svg";
-import facebookIcon from "../Assets/facebook.svg";
-import instagramIcon from "../Assets/instagram.svg";
+import githubIcon from "../Assets/lightMode/github.svg";
+import linkedinIcon from "../Assets/lightMode/linkedin.svg";
+import facebookIcon from "../Assets/lightMode/facebook.svg";
+import instagramIcon from "../Assets/lightMode/instagram.svg";
+import darkModeGithubIcon from "../Assets/darkMode/github.svg";
+import darkModeLinkedinIcon from "../Assets/darkMode/linkedin.svg";
+import darkModeFacebookIcon from "../Assets/darkMode/facebook.svg";
+import darkModeInstagramIcon from "../Assets/darkMode/instagram.svg";
 import { MySkills, SkillsIWantToLearn } from "./arraysWithSkills";
 import { selectDarkMode } from "../../projectsSlice";
 import { useSelector } from "react-redux";
@@ -84,7 +88,7 @@ const Tile = ({
 
               case "mySkills":
                 return (
-                  <List>
+                  <List darkMode={darkMode}>
                     {MySkills.map((skill) => (
                       <Item key={skill}>{skill}</Item>
                     ))}
@@ -92,7 +96,7 @@ const Tile = ({
                 );
               case "skillsIWantToLearn":
                 return (
-                  <List>
+                  <List darkMode={darkMode}>
                     {SkillsIWantToLearn.map((skill) => (
                       <Item key={skill}>{skill}</Item>
                     ))}
@@ -142,7 +146,7 @@ const Tile = ({
                         <a href="https//google.pl">
                           <Icon
                             darkMode={darkMode}
-                            src={githubIcon}
+                            src={!darkMode ? githubIcon : darkModeGithubIcon}
                             alt=""
                           ></Icon>
                         </a>
@@ -152,7 +156,9 @@ const Tile = ({
                           {" "}
                           <Icon
                             darkMode={darkMode}
-                            src={facebookIcon}
+                            src={
+                              !darkMode ? facebookIcon : darkModeFacebookIcon
+                            }
                             alt=""
                           ></Icon>
                         </a>
@@ -162,7 +168,9 @@ const Tile = ({
                           {" "}
                           <Icon
                             darkMode={darkMode}
-                            src={linkedinIcon}
+                            src={
+                              !darkMode ? linkedinIcon : darkModeLinkedinIcon
+                            }
                             alt=""
                           ></Icon>
                         </a>{" "}
@@ -172,7 +180,9 @@ const Tile = ({
                           {" "}
                           <Icon
                             darkMode={darkMode}
-                            src={instagramIcon}
+                            src={
+                              !darkMode ? instagramIcon : darkModeInstagramIcon
+                            }
                             alt=""
                           ></Icon>
                         </a>{" "}

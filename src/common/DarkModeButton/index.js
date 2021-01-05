@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Text, Button } from "./styled";
-import darkModeButton from "../Assets/darkModeButton.svg";
-import lightModeButton from "../Assets/lightModeButton.svg";
+import darkModeButton from "../Assets/darkMode/modeButton.svg";
+import lightModeButton from "../Assets/lightMode/modeButton.svg";
 import { selectDarkMode, toggleDarkMode } from "../../projectsSlice";
 import { useSelector, useDispatch } from "react-redux";
 

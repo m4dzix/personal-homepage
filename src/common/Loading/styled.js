@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components";
-import loader from "../Assets/loader.svg";
+import loader from "../Assets/lightMode/loader.svg";
+import darkModeLoader from "../Assets/darkMode/loader.svg";
 
 const rotate = keyframes` 
 to {
@@ -22,9 +23,12 @@ export const Text = styled.p`
 `;
 
 export const Loader = styled.div`
-  background-image: url(${loader});
   animation: ${rotate} 1s linear infinite;
   width: 160px;
   height: 160px;
   margin-bottom: 88px;
+  ${(props) =>
+    props.darkMode
+      ? `background-image: url(${loader});`
+      : `background-image: url(${darkModeLoader});`}
 `;

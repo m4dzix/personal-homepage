@@ -1,10 +1,15 @@
 import React from "react";
-import errorIcon from "../Assets/error.svg";
+import errorIcon from "../Assets/lightMode/error.svg";
+import darkModeErrorIcon from "../Assets/darkMode/error.svg";
 import { Container, Subheader, Text, GoToGithubButton } from "./styled";
-const Loading = () => {
+import { selectDarkMode } from "../../projectsSlice";
+import { useSelector } from "react-redux";
+
+const Error = () => {
+  const darkMode = useSelector(selectDarkMode);
   return (
     <Container>
-      <img src={errorIcon} alt=""></img>
+      <img src={!darkMode ? errorIcon : darkModeErrorIcon} alt=""></img>
       <Subheader>Ooops! Something went wrong...</Subheader>
       <Text>
         Sorry, failed to load Github projects.
@@ -18,4 +23,4 @@ const Loading = () => {
   );
 };
 
-export default Loading;
+export default Error;

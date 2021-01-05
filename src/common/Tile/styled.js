@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import myPhoto from "./image.jpg";
-import roundListStyle from "../Assets/roundListStyle.svg";
+import roundListStyle from "../Assets/lightMode/roundListStyle.svg";
+import darkModeRoundListStyle from "../Assets/darkMode/roundListStyle.svg";
 
 export const Container = styled.aside`
   display: grid;
@@ -167,10 +168,14 @@ export const List = styled.ul`
   grid-gap: 8px;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
-  list-style-image: url(${roundListStyle});
+
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     grid-template-columns: none;
   }
+  ${(props) =>
+    props.darkMode
+      ? `list-style-image: url(${roundListStyle});`
+      : `list-style-image: url(${darkModeRoundListStyle});`}
   ${(props) =>
     props.myGithubProjects &&
     css`
