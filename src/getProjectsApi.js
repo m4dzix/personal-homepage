@@ -1,5 +1,3 @@
-// import { owner, projectNames } from "./fetchFromApi";
-
 export const getProject = async () => {
   const api = `https://api.github.com/users/m4dzix/repos`;
 
