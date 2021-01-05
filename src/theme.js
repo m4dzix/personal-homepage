@@ -6,6 +6,7 @@ export const lightTheme = {
     text: "#6E7E91",
     lightLine: "rgba(209, 213, 218, 0.3)",
     darkLine: "rgba(209, 213, 218, 0.3)",
+    hoverLine: "rgba(3, 102, 214, 0.2)",
     mainBlue: "#0366D6",
   },
   breakpoints: {
@@ -21,6 +22,7 @@ export const darkTheme = {
     text: "#FFFFFF",
     lightLine: "rgba(209, 213, 218, 0.1)",
     darkLine: "#E5E5E5",
+    hoverLine: "rgba(3, 102, 214, 0.5)",
     mainBlue: "#2188FF",
   },
   breakpoints: {

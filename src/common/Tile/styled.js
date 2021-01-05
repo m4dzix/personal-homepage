@@ -47,6 +47,10 @@ export const Container = styled.aside`
     props.myGithubProjects &&
     css`
       padding: 50px;
+      border: 6px solid ${({ theme }) => theme.colors.lightLine};
+      &:hover {
+        border: 6px solid ${({ theme }) => theme.colors.hoverLine};
+      }
     `}
   ${(props) =>
     props.contact &&
