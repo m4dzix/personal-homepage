@@ -36,6 +36,8 @@ const Tile = ({
   myGithubProjects,
   mySkills,
   skillsIWantToLearn,
+  urlAdressToDemo,
+  urlAdressToLive,
 }) => {
   const darkMode = useSelector(selectDarkMode);
   return (
@@ -116,15 +118,13 @@ const Tile = ({
                       <Item>
                         {" "}
                         Demo:{" "}
-                        <Link href="https://m4dzix.github.io/movies-browser/">
-                          https://m4dzix.github.io/movies-browser/
+                        <Link href={urlAdressToDemo}>
+                          {urlAdressToDemo}
                         </Link>{" "}
                       </Item>
                       <Item>
                         Live:{" "}
-                        <Link href="https://m4dzix.github.io/movies-browser/">
-                          https://m4dzix.github.io/movies-browser/
-                        </Link>{" "}
+                        <Link href={urlAdressToLive}>{urlAdressToLive}</Link>{" "}
                       </Item>
                     </List>
                   </>
