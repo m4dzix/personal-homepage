@@ -18,7 +18,9 @@ import githubIcon from "../Assets/github.svg";
 import linkedinIcon from "../Assets/linkedin.svg";
 import facebookIcon from "../Assets/facebook.svg";
 import instagramIcon from "../Assets/instagram.svg";
-import { mySkilles, skillsIWantToLearn } from "./arraysWithSkills";
+import { mySkills, skillsIWantToLearn } from "./arraysWithSkills";
+import { selectDarkMode } from "../../projectsSlice";
+import { useSelector } from "react-redux";
 
 const Tile = ({
   inset,
@@ -29,6 +31,7 @@ const Tile = ({
   portfolio,
   myGithubProjects,
 }) => {
+  const darkMode = useSelector(selectDarkMode);
   return (
     <>
       <Container
@@ -78,7 +81,7 @@ const Tile = ({
               case "mySkills":
                 return (
                   <List>
-                    {mySkilles.map((skill) => (
+                    {mySkills.map((skill) => (
                       <Item key={skill}>{skill}</Item>
                     ))}
                   </List>
@@ -133,25 +136,41 @@ const Tile = ({
                     <List contact={contact}>
                       <Item>
                         <a href="https//google.pl">
-                          <Icon src={githubIcon} alt=""></Icon>
+                          <Icon
+                            darkMode={darkMode}
+                            src={githubIcon}
+                            alt=""
+                          ></Icon>
                         </a>
                       </Item>
                       <Item>
                         <a href="https//google.pl">
                           {" "}
-                          <Icon src={facebookIcon} alt=""></Icon>
+                          <Icon
+                            darkMode={darkMode}
+                            src={facebookIcon}
+                            alt=""
+                          ></Icon>
                         </a>
                       </Item>
                       <Item>
                         <a href="https//google.pl">
                           {" "}
-                          <Icon src={linkedinIcon} alt=""></Icon>
+                          <Icon
+                            darkMode={darkMode}
+                            src={linkedinIcon}
+                            alt=""
+                          ></Icon>
                         </a>{" "}
                       </Item>
                       <Item>
                         <a href="https//google.pl">
                           {" "}
-                          <Icon src={instagramIcon} alt=""></Icon>
+                          <Icon
+                            darkMode={darkMode}
+                            src={instagramIcon}
+                            alt=""
+                          ></Icon>
                         </a>{" "}
                       </Item>
                     </List>
