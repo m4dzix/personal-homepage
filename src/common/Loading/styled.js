@@ -14,12 +14,13 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  margin-top: 16px;
 `;
 
 export const Text = styled.p`
   font-size: 20px;
   color: ${({ theme }) => theme.colors.title};
-  margin-bottom: 88px;
+  margin-bottom: 48px;
 `;
 
 export const Loader = styled.div`

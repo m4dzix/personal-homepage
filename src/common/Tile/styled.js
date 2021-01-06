@@ -47,7 +47,8 @@ export const Container = styled.aside`
   ${(props) =>
     props.myGithubProjects &&
     css`
-      padding: 50px;
+      padding: 56px;
+      grid-gap:24px
       border: 6px solid ${({ theme }) => theme.colors.lightLine};
       &:hover {
         border: 6px solid ${({ theme }) => theme.colors.hoverLine};
@@ -79,6 +80,7 @@ export const Photo = styled.div`
   }
 `;
 export const Inset = styled.h3`
+  margin: 0px;
   font-size: 12px;
   line-height: 130%;
   text-transform: uppercase;
@@ -97,6 +99,7 @@ export const Title = styled.h1`
   line-height: 36px;
   letter-spacing: 0.05em;
   padding-bottom: 0px;
+  margin: 12px 0 0 0;
   ${(props) =>
     props.mySkills &&
     css`
@@ -115,6 +118,12 @@ export const Title = styled.h1`
     css`
       color: ${({ theme }) => theme.colors.mainBlue};
       font-size: 24px;
+      margin: 0;
+    `}
+  ${(props) =>
+    props.contact &&
+    css`
+      margin-top: 24px;
     `}
 `;
 export const ContentContainer = styled.div`
@@ -132,12 +141,16 @@ export const Description = styled.p`
   line-height: 1.4;
   letter-spacing: 0.05em;
   color: ${({ theme }) => theme.colors.text};
-  margin: 35px 0 0 0;
+  margin: 24px 0 0 0;
   ${(props) =>
     props.myGithubProjects &&
     css`
       font-size: 18px;
-      margin-top: 24px;
+    `}
+  ${(props) =>
+    props.aboutMe &&
+    css`
+      margin-top: 35px;
     `}
 `;
 export const Button = styled.button`
@@ -168,7 +181,7 @@ export const List = styled.ul`
   grid-gap: 8px;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
-
+  margin: 32px 0;
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     grid-template-columns: none;
   }
@@ -183,6 +196,7 @@ export const List = styled.ul`
       grid-template-rows: 1fr 1fr;
       list-style: none;
       padding: 0px;
+      margin: 24px 0;
       width: auto;
     `}
   ${(props) =>
@@ -191,7 +205,7 @@ export const List = styled.ul`
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: none;
       list-style: none;
-      margin-top: 50px;
+      margin-top: 56px;
       padding: 0px;
       grid-gap: 24px;
       width: auto;

@@ -5,7 +5,7 @@ export const Container = styled.div`
   justify-items: center;
   align-items: center;
   justify-self: flex-end;
-  margin: 17.46px;
+  margin-bottom: calc(-72px - 32px);
 `;
 export const Text = styled.p`
   text-transform: uppercase;

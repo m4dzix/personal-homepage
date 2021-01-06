@@ -16,7 +16,7 @@ const Error = () => {
         <br />
         You can check them directly on Github.
       </Text>
-      <GoToGithubButton href="https://github.com/m4dzix">
+      <GoToGithubButton darkMode={darkMode} href="https://github.com/m4dzix">
         Go to Github
       </GoToGithubButton>
     </Container>
