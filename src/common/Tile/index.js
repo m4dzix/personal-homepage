@@ -84,7 +84,11 @@ const Tile = ({
                       expand my knowledge and skills. Below are some of my
                       projects
                     </Description>
-                    <a href="mailto:madlen.checinski@gmail.com">
+                    <a
+                      href="mailto:madlen.checinski@gmail.com"
+                      rel="noreferrer noopener"
+                      target="_blank"
+                    >
                       {" "}
                       <Button>
                         <img src={message} alt=""></img> Hire me
@@ -143,7 +147,11 @@ const Tile = ({
                     </Description>
                     <List contact={contact}>
                       <Item>
-                        <a href="https//google.pl">
+                        <a
+                          href="https://github.com/m4dzix"
+                          rel="noreferrer noopener"
+                          target="_blank"
+                        >
                           <Icon
                             darkMode={darkMode}
                             src={!darkMode ? githubIcon : darkModeGithubIcon}
@@ -152,7 +160,11 @@ const Tile = ({
                         </a>
                       </Item>
                       <Item>
-                        <a href="https//google.pl">
+                        <a
+                          href="https://www.facebook.com/magda.piatkowska.146"
+                          rel="noreferrer noopener"
+                          target="_blank"
+                        >
                           {" "}
                           <Icon
                             darkMode={darkMode}
@@ -164,7 +176,7 @@ const Tile = ({
                         </a>
                       </Item>
                       <Item>
-                        <a href="https//google.pl">
+                        <a href="" rel="noreferrer noopener" target="_blank">
                           {" "}
                           <Icon
                             darkMode={darkMode}
@@ -176,7 +188,7 @@ const Tile = ({
                         </a>{" "}
                       </Item>
                       <Item>
-                        <a href="https//google.pl">
+                        <a href="" rel="noreferrer noopener" target="_blank">
                           {" "}
                           <Icon
                             darkMode={darkMode}

@@ -11,7 +11,10 @@ const Contact = () => {
           contact={true}
           inset={"let's talk!"}
           title={
-            <a href="mailto:madlen.checinski@gmail.com">
+            <a
+              href="mailto:madlen.checinski@gmail.com"
+              rel="noreferrer noopener"
+            >
               madlen.checinski@gmail.com
             </a>
           }

@@ -16,7 +16,12 @@ const Error = () => {
         <br />
         You can check them directly on Github.
       </Text>
-      <GoToGithubButton darkMode={darkMode} href="https://github.com/m4dzix">
+      <GoToGithubButton
+        darkMode={darkMode}
+        href="https://github.com/m4dzix"
+        rel="noreferrer noopener"
+        target="_blank"
+      >
         Go to Github
       </GoToGithubButton>
     </Container>
