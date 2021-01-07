@@ -38,6 +38,7 @@ const Tile = ({
   skillsIWantToLearn,
   urlAdressToDemo,
   urlAdressToLive,
+  description,
 }) => {
   const darkMode = useSelector(selectDarkMode);
   return (
@@ -75,9 +76,13 @@ const Tile = ({
                 return (
                   <>
                     <Description aboutMe={aboutMe}>
-                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                      sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                      magna aliquyam erat, sed diam voluptua.
+                      My name is Magdalena. I am an ambitious person taking my
+                      first steps in the front-end. I recently completed the
+                      Become a Front-End Developer course, organized by
+                      Youcode.pl. I've already learned a lot about HTML, CSS, JS
+                      and also React- which i love. I would like to further
+                      expand my knowledge and skills. Below are some of my
+                      projects
                     </Description>
                     <a href="mailto:madlen.checinski@gmail.com">
                       {" "}
@@ -110,9 +115,7 @@ const Tile = ({
                 return (
                   <>
                     <Description myGithubProjects={myGithubProjects}>
-                      Project description, e.g. website where you can search for
-                      favourite movies and people. Project description, e.g.
-                      website where you can search.
+                      {description}
                     </Description>
                     <List myGithubProjects={myGithubProjects}>
                       <Item>
@@ -134,12 +137,9 @@ const Tile = ({
                 return (
                   <>
                     <Description>
-                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                      sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                      magna aliquyam erat, sed diam voluptua. At vero eos et
-                      accusam et justo duo dolores et ea rebum. Stet clita kasd
-                      gubergren, no sea takimata sanctus est Lorem ipsum dolor
-                      sit amet.
+                      I am open to any proposals for cooperation and development
+                      opportunities. If you want to have your own website or
+                      application - please contact me. We can help each other
                     </Description>
                     <List contact={contact}>
                       <Item>

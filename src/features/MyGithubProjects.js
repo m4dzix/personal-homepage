@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { selectProject, selectLoading, fetchProject } from "../projectsSlice";
 import Section from "../common/Section";
 import Tile from "../common/Tile";
+import { findDescriptionOfProject } from "../findDescriptionOfProject";
 import Loading from "../common/Loading";
 import Error from "../common/Error";
 
@@ -26,6 +27,7 @@ const MyGithubProjects = () => {
               myGithubProjects={true}
               title={project.name}
               typeOfContent={"myGithubProjects"}
+              description={findDescriptionOfProject(project.name)}
               urlAdressToDemo={project.html_url}
               urlAdressToLive={`https://${project.owner.login}.github.io/${project.name}/`}
             ></Tile>
