@@ -7,6 +7,7 @@ export const Container = styled.div`
   justify-self: flex-end;
   margin-bottom: calc(-72px - 32px);
 `;
+
 export const Text = styled.p`
   text-transform: uppercase;
   color: ${({ theme }) => theme.colors.text};

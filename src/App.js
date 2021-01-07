@@ -14,6 +14,7 @@ import { lightTheme, darkTheme } from "./theme";
 
 function App() {
   const darkMode = useSelector(selectDarkMode);
+
   return (
     <ThemeProvider theme={!darkMode ? lightTheme : darkTheme}>
       <GlobalStyle />

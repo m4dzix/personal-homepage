@@ -16,6 +16,7 @@ export const Subheader = styled.h3`
   letter-spacing: 0.05em;
   margin: 23.16px 0 0 0;
 `;
+
 export const Text = styled.p`
   font-size: 20px;
   color: ${({ theme }) => theme.colors.title};
@@ -23,6 +24,7 @@ export const Text = styled.p`
   text-align: center;
   letter-spacing: 0.05em;
 `;
+
 export const GoToGithubButton = styled.a`
   font-weight: 600;
   font-size: 20.0584px;

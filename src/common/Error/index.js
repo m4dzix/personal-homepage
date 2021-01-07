@@ -1,12 +1,13 @@
 import React from "react";
-import errorIcon from "../Assets/lightMode/error.svg";
-import darkModeErrorIcon from "../Assets/darkMode/error.svg";
+import { useSelector } from "react-redux";
 import { Container, Subheader, Text, GoToGithubButton } from "./styled";
 import { selectDarkMode } from "../../projectsSlice";
-import { useSelector } from "react-redux";
+import errorIcon from "../Assets/lightMode/error.svg";
+import darkModeErrorIcon from "../Assets/darkMode/error.svg";
 
 const Error = () => {
   const darkMode = useSelector(selectDarkMode);
+
   return (
     <Container>
       <img src={!darkMode ? errorIcon : darkModeErrorIcon} alt=""></img>

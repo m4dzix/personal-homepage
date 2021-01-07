@@ -1,4 +1,16 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { selectDarkMode } from "../../projectsSlice";
+import message from "../Assets/message.svg";
+import githubIcon from "../Assets/lightMode/github.svg";
+import linkedinIcon from "../Assets/lightMode/linkedin.svg";
+import facebookIcon from "../Assets/lightMode/facebook.svg";
+import instagramIcon from "../Assets/lightMode/instagram.svg";
+import darkModeGithubIcon from "../Assets/darkMode/github.svg";
+import darkModeLinkedinIcon from "../Assets/darkMode/linkedin.svg";
+import darkModeFacebookIcon from "../Assets/darkMode/facebook.svg";
+import darkModeInstagramIcon from "../Assets/darkMode/instagram.svg";
+import { MySkills, SkillsIWantToLearn } from "./arraysWithSkills";
 import {
   Container,
   Photo,
@@ -13,18 +25,6 @@ import {
   Icon,
   Subheader,
 } from "./styled";
-import message from "../Assets/message.svg";
-import githubIcon from "../Assets/lightMode/github.svg";
-import linkedinIcon from "../Assets/lightMode/linkedin.svg";
-import facebookIcon from "../Assets/lightMode/facebook.svg";
-import instagramIcon from "../Assets/lightMode/instagram.svg";
-import darkModeGithubIcon from "../Assets/darkMode/github.svg";
-import darkModeLinkedinIcon from "../Assets/darkMode/linkedin.svg";
-import darkModeFacebookIcon from "../Assets/darkMode/facebook.svg";
-import darkModeInstagramIcon from "../Assets/darkMode/instagram.svg";
-import { MySkills, SkillsIWantToLearn } from "./arraysWithSkills";
-import { selectDarkMode } from "../../projectsSlice";
-import { useSelector } from "react-redux";
 
 const Tile = ({
   inset,
@@ -41,6 +41,7 @@ const Tile = ({
   description,
 }) => {
   const darkMode = useSelector(selectDarkMode);
+
   return (
     <>
       <Container
@@ -96,7 +97,6 @@ const Tile = ({
                     </a>
                   </>
                 );
-
               case "mySkills":
                 return (
                   <List darkMode={darkMode}>
@@ -136,7 +136,6 @@ const Tile = ({
                     </List>
                   </>
                 );
-
               default:
                 return (
                   <>

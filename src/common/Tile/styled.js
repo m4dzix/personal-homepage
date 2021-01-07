@@ -64,6 +64,7 @@ export const Container = styled.aside`
       max-width: 670px;
     `}
 `;
+
 export const Photo = styled.div`
   grid-area: photo;
   background-image: url(${myPhoto});
@@ -79,6 +80,7 @@ export const Photo = styled.div`
     height: 132.67px;
   }
 `;
+
 export const Inset = styled.h3`
   margin: 0px;
   font-size: 12px;
@@ -91,6 +93,7 @@ export const Inset = styled.h3`
       text-align: center;
     `}
 `;
+
 export const Title = styled.h1`
   grid-area: title;
   font-weight: 900;
@@ -126,6 +129,7 @@ export const Title = styled.h1`
       margin-top: 24px;
     `}
 `;
+
 export const ContentContainer = styled.div`
   grid-area: content;
   display: flex;
@@ -136,6 +140,7 @@ export const ContentContainer = styled.div`
   color: ${({ theme }) => theme.colors.text};
   letter-spacing: 0.05em;
 `;
+
 export const Description = styled.p`
   font-size: 20px;
   line-height: 1.4;
@@ -153,6 +158,7 @@ export const Description = styled.p`
       margin-top: 35px;
     `}
 `;
+
 export const Button = styled.button`
   font-weight: 600;
   width: 154px;
@@ -176,6 +182,7 @@ export const Button = styled.button`
         : "box-shadow: 2px -2px 0px #6D93BE, -2px 2px 0px #6D93BE, 2px 2px 0px #6D93BE, -2px -2px 0px #6D93BE;"};
   }
 `;
+
 export const List = styled.ul`
   display: grid;
   grid-gap: 8px;
@@ -214,12 +221,14 @@ export const List = styled.ul`
       }
     `}
 `;
+
 export const Item = styled.li`
   font-size: 18px;
   line-height: 1.4;
   letter-spacing: 0.05em;
   color: ${({ theme }) => theme.colors.text};
 `;
+
 export const Icon = styled.img`
   filter: ${(props) =>
     props.darkMode
@@ -229,12 +238,14 @@ export const Icon = styled.img`
     filter: none;
   }
 `;
+
 export const Link = styled.a`
   color: ${({ theme }) => theme.colors.mainBlue};
   line-height: 140%;
   padding: 2px;
   border-bottom: 1px solid rgba(3, 103, 216, 0.2);
 `;
+
 export const Subheader = styled.h2`
   font-size: 20px;
   line-height: 1.4;
