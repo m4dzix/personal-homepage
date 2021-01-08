@@ -81,7 +81,7 @@ const Tile = ({
                       first steps in the front-end. I recently completed the
                       Become a Front-End Developer course, organized by
                       Youcode.pl. I've already learned a lot about HTML, CSS, JS
-                      and also React- which i love. I would like to further
+                      and also React- which I love. I would like to further
                       expand my knowledge and skills. Below are some of my
                       projects
                     </Description>

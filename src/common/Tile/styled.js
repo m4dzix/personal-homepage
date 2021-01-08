@@ -48,7 +48,6 @@ export const Container = styled.aside`
     props.myGithubProjects &&
     css`
       padding: 56px;
-      grid-gap:24px
       border: 6px solid ${({ theme }) => theme.colors.lightLine};
       &:hover {
         border: 6px solid ${({ theme }) => theme.colors.hoverLine};
@@ -203,7 +202,7 @@ export const List = styled.ul`
       grid-template-rows: 1fr 1fr;
       list-style: none;
       padding: 0px;
-      margin: 24px 0;
+      margin: 24px 0 0 0;
       width: auto;
     `}
   ${(props) =>
