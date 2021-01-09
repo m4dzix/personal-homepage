@@ -49,6 +49,7 @@ export const Container = styled.aside`
     css`
       padding: 56px;
       border: 6px solid ${({ theme }) => theme.colors.lightLine};
+      transition: 0.3s;
       &:hover {
         border: 6px solid ${({ theme }) => theme.colors.hoverLine};
       }
@@ -173,7 +174,7 @@ export const Button = styled.button`
   border: 1px solid rgba(209, 213, 218, 0.3);
   border-radius: 4px;
   margin-top: 32px;
-  transition: 0.3;
+  transition: 0.3s;
   &:hover {
     ${(props) =>
       props.darkMode
@@ -233,6 +234,7 @@ export const Icon = styled.img`
     props.darkMode
       ? "invert(0%) sepia(0%) saturate(0%) hue-rotate(329deg) brightness(500%) contrast(100%)"
       : "invert(10%) sepia(0%) saturate(0%) hue-rotate(329deg) brightness(50%) contrast(100%)"};
+  transition: 0.3s;
   &:hover {
     filter: none;
   }

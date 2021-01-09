@@ -37,6 +37,7 @@ export const GoToGithubButton = styled.a`
   background-color: ${({ theme }) => theme.colors.mainBlue};
   color: #ffffff;
   margin: 44px 0 0 0;
+  transition: 0.3s;
   &:hover {
     color: #ffffff;
     background-color: ${({ theme }) => theme.colors.mainBlue};
