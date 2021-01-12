@@ -1,9 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { selectDarkMode, toggleDarkMode } from "../../projectsSlice";
-import { Container, Text, Button } from "./styled";
-import darkModeButton from "../Assets/darkMode/modeButton.svg";
-import lightModeButton from "../Assets/lightMode/modeButton.svg";
+import { Container, Text, Button, SwichThemeIcon } from "./styled";
 
 const DarkModeButton = () => {
   const darkMode = useSelector(selectDarkMode);
@@ -17,10 +15,7 @@ const DarkModeButton = () => {
           dispatch(toggleDarkMode());
         }}
       >
-        <img
-          src={!darkMode ? lightModeButton : darkModeButton}
-          alt="toggle mode"
-        ></img>
+        <SwichThemeIcon darkMode={darkMode}></SwichThemeIcon>
       </Button>
     </Container>
   );

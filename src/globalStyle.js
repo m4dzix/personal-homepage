@@ -17,6 +17,7 @@ body {
 a {
 color: ${({ theme }) => theme.colors.title};
 text-decoration: none;
+transition: 0.3s;
 &:hover {
   color: ${({ theme }) => theme.colors.mainBlue};
   }
