@@ -3,7 +3,7 @@ import myPhoto from "./image.jpg";
 import roundListStyle from "../Assets/lightMode/roundListStyle.svg";
 import darkModeRoundListStyle from "../Assets/darkMode/roundListStyle.svg";
 
-export const Container = styled.aside`
+export const Container = styled.div`
   display: grid;
   grid-template-rows: auto 1fr;
   grid-template-areas:
@@ -232,8 +232,8 @@ export const Item = styled.li`
 export const Icon = styled.img`
   filter: ${(props) =>
     props.darkMode
-      ? "invert(0%) sepia(0%) saturate(0%) hue-rotate(329deg) brightness(500%) contrast(100%)"
-      : "invert(10%) sepia(0%) saturate(0%) hue-rotate(329deg) brightness(50%) contrast(100%)"};
+      ? "invert(0%) sepia(0%) saturate(0%) brightness(500%) contrast(100%)"
+      : "invert(10%) sepia(0%) saturate(0%) brightness(50%) contrast(100%)"};
   transition: 0.3s;
   &:hover {
     filter: none;
