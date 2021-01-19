@@ -12,6 +12,7 @@ html{
 body {
  font-family: 'Inter', sans-serif;
  background-color: ${({ theme }) => theme.colors.background};
+ transition: 0.3s;
 }
 
 a {
