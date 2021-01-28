@@ -11,3 +11,4 @@ export const getProject = async () => {
 
   return project;
 };
+console.log(getProject());

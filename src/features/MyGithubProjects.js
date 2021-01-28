@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { selectProject, selectLoading, fetchProject } from "../projectsSlice";
 import Section from "../common/Section";
 import Tile from "../common/Tile";
-import { findDescriptionOfProject } from "../findDescriptionOfProject";
 import Loading from "../common/Loading";
 import Error from "../common/Error";
 
@@ -11,7 +10,7 @@ const MyGithubProjects = () => {
   const projects = useSelector(selectProject);
   const loading = useSelector(selectLoading);
   const dispatch = useDispatch();
-
+  console.log(projects);
   useEffect(() => {
     dispatch(fetchProject());
   }, [dispatch]);
@@ -27,7 +26,7 @@ const MyGithubProjects = () => {
               myGithubProjects={true}
               title={project.name}
               typeOfContent={"myGithubProjects"}
-              description={findDescriptionOfProject(project.name)}
+              description={project.description}
               urlAdressToDemo={project.html_url}
               urlAdressToLive={`https://${project.owner.login}.github.io/${project.name}/`}
             ></Tile>
