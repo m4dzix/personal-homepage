@@ -1,6 +1,5 @@
 import React from "react";
 import message from "../Assets/message.svg";
-
 import {
   Container,
   Photo,
@@ -15,7 +14,7 @@ import {
 const TileWithNoBackground = ({
   inset,
   title,
-
+  description,
   typeOfContent,
   aboutMe,
   contact,
@@ -24,22 +23,16 @@ const TileWithNoBackground = ({
   return (
     <Container aboutMe={aboutMe} contact={contact}>
       <Photo hidden={typeOfContent !== "aboutMe"}></Photo>
-
-      <Inset>{inset}</Inset>
-      <Title aboutMe={aboutMe} contact={contact}>
-        {title}
-      </Title>
+      <div>
+        <Inset>{inset}</Inset>
+        <Title aboutMe={aboutMe} contact={contact}>
+          {title}
+        </Title>
+      </div>
       <ContentContainer aboutMe={aboutMe} contact={contact}>
         {typeOfContent === "aboutMe" ? (
           <>
-            <Description aboutMe={aboutMe}>
-              My name is Magdalena. I am an ambitious person taking my first
-              steps in the front-end. I recently completed the Become a
-              Front-End Developer course, organized by Youcode.pl. I've already
-              learned a lot about HTML, CSS, JS and also React- which I love. I
-              would like to further expand my knowledge and skills. Below are
-              some of my projects
-            </Description>
+            <Description aboutMe={aboutMe}>{description}</Description>
             <a
               href="mailto:madlen.checinski@gmail.com"
               rel="noreferrer noopener"
@@ -53,11 +46,7 @@ const TileWithNoBackground = ({
           </>
         ) : (
           <>
-            <Description>
-              I am open to any proposals for cooperation and development
-              opportunities. If you want to have your own website or application
-              - please contact me. We can help each other
-            </Description>
+            <Description>{description}</Description>
             <List>{bodyList}</List>
           </>
         )}

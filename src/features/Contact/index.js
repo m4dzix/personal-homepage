@@ -8,7 +8,7 @@ import { selectDarkMode } from "../../projectsSlice";
 const Contact = () => {
   const darkMode = useSelector(selectDarkMode);
   const mySocialMedias = useSocialMedia(darkMode);
-  console.log(mySocialMedias);
+
   return (
     <Section
       body={
@@ -23,6 +23,9 @@ const Contact = () => {
             >
               madlen.checinski@gmail.com
             </a>
+          }
+          description={
+            "I am open to any proposals for cooperation and development opportunities. If you want to have your own website or application - please contact me. We can help each other"
           }
           bodyList={mySocialMedias.map((mySocialMedia) => {
             return (
