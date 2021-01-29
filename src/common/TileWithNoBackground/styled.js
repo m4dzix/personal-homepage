@@ -102,10 +102,7 @@ export const Button = styled.button`
   margin-top: 32px;
   transition: 0.3s;
   &:hover {
-    ${(props) =>
-      props.darkMode
-        ? "box-shadow: 2px -2px 0px #8CC2FF, -2px 2px 0px #8CC2FF, 2px 2px 0px #8CC2FF, -2px -2px 0px #8CC2FF;"
-        : "box-shadow: 2px -2px 0px #6D93BE, -2px 2px 0px #6D93BE, 2px 2px 0px #6D93BE, -2px -2px 0px #6D93BE;"};
+    box-shadow: ${({ theme }) => theme.boxShadow.button};
   }
 `;
 

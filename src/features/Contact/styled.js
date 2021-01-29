@@ -8,10 +8,7 @@ export const Item = styled.li`
 `;
 
 export const Icon = styled.img`
-  filter: ${(props) =>
-    props.darkMode
-      ? "invert(0%) sepia(0%) saturate(0%) brightness(500%) contrast(100%)"
-      : "invert(10%) sepia(0%) saturate(0%) brightness(50%) contrast(100%)"};
+  filter: ${({ theme }) => theme.filter.makeIconBlue};
   transition: 0.3s;
   &:hover {
     filter: none;

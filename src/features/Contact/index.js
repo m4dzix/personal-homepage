@@ -3,11 +3,9 @@ import { StyledSection } from "../../common/StyledSection";
 import { Item, Icon } from "./styled";
 import TileWithNoBackground from "../../common/TileWithNoBackground";
 import { useSocialMedia } from "./mySocialMedias";
-import { useSelector } from "react-redux";
-import { selectDarkMode } from "../../projectsSlice";
+
 const Contact = () => {
-  const darkMode = useSelector(selectDarkMode);
-  const mySocialMedias = useSocialMedia(darkMode);
+  const mySocialMedias = useSocialMedia();
 
   return (
     <StyledSection>
@@ -32,7 +30,6 @@ const Contact = () => {
                 target="_blank"
               >
                 <Icon
-                  darkMode={darkMode}
                   src={mySocialMedia.socialMediaIcon()}
                   alt={mySocialMedia.alt}
                 ></Icon>

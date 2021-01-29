@@ -41,11 +41,6 @@ export const GoToGithubButton = styled.a`
   &:hover {
     color: #ffffff;
     background-color: ${({ theme }) => theme.colors.mainBlue};
-  }
-  &:hover {
-    ${(props) =>
-      props.darkMode
-        ? "box-shadow: 2px -2px 0px #8CC2FF, -2px 2px 0px #8CC2FF, 2px 2px 0px #8CC2FF, -2px -2px 0px #8CC2FF;"
-        : "box-shadow: 2px -2px 0px #6D93BE, -2px 2px 0px #6D93BE, 2px 2px 0px #6D93BE, -2px -2px 0px #6D93BE;"};
+    box-shadow: ${({ theme }) => theme.boxShadow.button};
   }
 `;

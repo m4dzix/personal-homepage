@@ -1,6 +1,4 @@
 import styled, { css } from "styled-components";
-import roundListStyle from "../Assets/lightMode/roundListStyle.svg";
-import darkModeRoundListStyle from "../Assets/darkMode/roundListStyle.svg";
 
 export const Container = styled.div`
   display: grid;
@@ -54,13 +52,10 @@ export const List = styled.ul`
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
   margin: 32px 0;
+  list-style-image: ${({ theme }) => theme.imagesToStyling.listStyle};
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     grid-template-columns: none;
   }
-  ${(props) =>
-    props.darkMode
-      ? `list-style-image: url(${roundListStyle});`
-      : `list-style-image: url(${darkModeRoundListStyle});`}
 `;
 
 export const Item = styled.li`

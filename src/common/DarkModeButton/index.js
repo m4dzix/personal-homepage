@@ -15,7 +15,7 @@ const DarkModeButton = () => {
           dispatch(toggleDarkMode());
         }}
       >
-        <SwichThemeIcon darkMode={darkMode}></SwichThemeIcon>
+        <SwichThemeIcon />
       </Button>
     </Container>
   );

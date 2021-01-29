@@ -6,8 +6,11 @@ import darkModeGithubIcon from "../../common/Assets/darkMode/github.svg";
 import darkModeLinkedinIcon from "../../common/Assets/darkMode/linkedin.svg";
 import darkModeFacebookIcon from "../../common/Assets/darkMode/facebook.svg";
 import darkModeInstagramIcon from "../../common/Assets/darkMode/instagram.svg";
+import { useSelector } from "react-redux";
+import { selectDarkMode } from "../../projectsSlice";
 
-export const useSocialMedia = (darkMode) => {
+export const useSocialMedia = () => {
+  const darkMode = useSelector(selectDarkMode);
   return [
     {
       name: "github",

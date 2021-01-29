@@ -18,7 +18,6 @@ const Error = () => {
         You can check them directly on Github.
       </Text>
       <GoToGithubButton
-        darkMode={darkMode}
         href="https://github.com/m4dzix"
         rel="noreferrer noopener"
         target="_blank"

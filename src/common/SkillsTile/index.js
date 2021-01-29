@@ -1,12 +1,8 @@
 import React from "react";
 import { Container, Title, ContentContainer, List, Item } from "./styled";
 import { MySkills, SkillsIWantToLearn } from "./arraysWithSkills";
-import { useSelector } from "react-redux";
-import { selectDarkMode } from "../../projectsSlice";
 
 const SkillsTile = ({ skillsIWantToLearn, mySkills, typeOfContent, title }) => {
-  const darkMode = useSelector(selectDarkMode);
-
   return (
     <Container>
       <Title mySkills={mySkills} skillsIWantToLearn={skillsIWantToLearn}>
@@ -17,7 +13,7 @@ const SkillsTile = ({ skillsIWantToLearn, mySkills, typeOfContent, title }) => {
           switch (typeOfContent) {
             case "mySkills":
               return (
-                <List darkMode={darkMode}>
+                <List>
                   {MySkills.map((skill) => (
                     <Item key={skill}>{skill}</Item>
                   ))}
@@ -25,7 +21,7 @@ const SkillsTile = ({ skillsIWantToLearn, mySkills, typeOfContent, title }) => {
               );
             case "skillsIWantToLearn":
               return (
-                <List darkMode={darkMode}>
+                <List>
                   {SkillsIWantToLearn.map((skill) => (
                     <Item key={skill}>{skill}</Item>
                   ))}

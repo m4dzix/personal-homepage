@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import darkModeButton from "../Assets/darkMode/modeButton.svg";
-import lightModeButton from "../Assets/lightMode/modeButton.svg";
 
 export const Container = styled.div`
   display: flex;
@@ -27,8 +25,5 @@ export const SwichThemeIcon = styled.div`
   transition: 0.5s;
   width: 48px;
   height: 26px;
-  ${(props) =>
-    props.darkMode
-      ? `background-image: url(${darkModeButton});`
-      : `background-image: url(${lightModeButton});`};
+  background-image: ${({ theme }) => theme.imagesToStyling.modeButton};
 `;

@@ -1,3 +1,10 @@
+import loader from "./common/Assets/lightMode/loader.svg";
+import darkModeLoader from "./common/Assets/darkMode/loader.svg";
+import modeButton from "./common/Assets/lightMode/modeButton.svg";
+import darkModeButton from "./common/Assets/darkMode/modeButton.svg";
+import roundListStyle from "./common/Assets/lightMode/roundListStyle.svg";
+import darkModeRoundListStyle from "./common/Assets/darkMode/roundListStyle.svg";
+
 export const lightTheme = {
   colors: {
     background: "#FBFBFE",
@@ -11,6 +18,19 @@ export const lightTheme = {
   },
   breakpoints: {
     mobileMax: 812,
+  },
+  imagesToStyling: {
+    loader: `url(${loader})`,
+    modeButton: `url(${modeButton})`,
+    listStyle: `url(${roundListStyle})`,
+  },
+  boxShadow: {
+    button:
+      "2px -2px 0px #6D93BE, -2px 2px 0px #6D93BE, 2px 2px 0px #6D93BE, -2px -2px 0px #6D93BE;",
+  },
+  filter: {
+    makeIconBlue:
+      "invert(10%) sepia(0%) saturate(0%) brightness(50%) contrast(100%)",
   },
 };
 
@@ -27,5 +47,22 @@ export const darkTheme = {
   },
   breakpoints: {
     mobileMax: 812,
+  },
+  imagesToStyling: {
+    loader: `url(${darkModeLoader})`,
+    modeButton: `url(${darkModeButton})`,
+    listStyle: `url(${darkModeRoundListStyle})`,
+  },
+  boxShadow: {
+    button:
+      "2px -2px 0px #8CC2FF, -2px 2px 0px #8CC2FF, 2px 2px 0px #8CC2FF, -2px -2px 0px #8CC2FF;",
+  },
+  filter: {
+    makeIconBlue:
+      "invert(0%) sepia(0%) saturate(0%) brightness(500%) contrast(100%)",
+  },
+  filter: {
+    makeIconBlue:
+      "invert(0%) sepia(0%) saturate(0%) brightness(500%) contrast(100%)",
   },
 };

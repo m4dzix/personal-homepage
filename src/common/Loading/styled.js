@@ -1,6 +1,4 @@
 import styled, { keyframes } from "styled-components";
-import loader from "../Assets/lightMode/loader.svg";
-import darkModeLoader from "../Assets/darkMode/loader.svg";
 
 const rotate = keyframes` 
 to {
@@ -28,8 +26,5 @@ export const Loader = styled.div`
   width: 160px;
   height: 160px;
   margin-bottom: 88px;
-  ${(props) =>
-    props.darkMode
-      ? `background-image: url(${loader});`
-      : `background-image: url(${darkModeLoader});`}
+  background-image: ${({ theme }) => theme.imagesToStyling.loader};
 `;
