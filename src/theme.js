@@ -11,9 +11,9 @@ export const lightTheme = {
     boxColor: "#FFFFFF",
     title: "#252525",
     text: "#6E7E91",
-    lightLine: "rgba(209, 213, 218, 0.3)",
-    darkLine: "rgba(209, 213, 218, 0.3)",
-    hoverLine: "rgba(3, 102, 214, 0.2)",
+    lightLine: "#D1D5DA4D",
+    darkLine: "#D1D5DA4D",
+    hoverLine: "#0366D633",
     mainBlue: "#0366D6",
   },
   breakpoints: {
@@ -37,12 +37,12 @@ export const lightTheme = {
 export const darkTheme = {
   colors: {
     background: "#252525",
-    boxColor: " rgba(54, 54, 54, 0.72)",
+    boxColor: "#363636b8",
     title: "#FFFFFF",
     text: "#FFFFFF",
-    lightLine: "rgba(209, 213, 218, 0.1)",
+    lightLine: "#D1D5DA1A",
     darkLine: "#E5E5E5",
-    hoverLine: "rgba(3, 102, 214, 0.5)",
+    hoverLine: "#0366D680",
     mainBlue: "#2188FF",
   },
   breakpoints: {
