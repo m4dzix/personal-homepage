@@ -25,7 +25,7 @@ const MyGithubProjects = () => {
               myGithubProjects={true}
               title={project.name}
               typeOfContent={"myGithubProjects"}
-              description={project.description}
+              description={project?.description}
               urlAdressToDemo={project.html_url}
               urlAdressToLive={project.homepage}
             ></GithubProjectsTile>
