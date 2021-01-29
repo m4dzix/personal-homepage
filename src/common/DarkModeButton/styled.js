@@ -21,6 +21,7 @@ export const Button = styled.button`
   background-color: transparent;
   border: none;
 `;
+
 export const SwichThemeIcon = styled.div`
   transition: 0.5s;
   width: 48px;

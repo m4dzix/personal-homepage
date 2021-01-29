@@ -1,6 +1,6 @@
 import React from "react";
 import { StyledSection } from "../common/StyledSection";
-import TileWithNoBackground from "../common/TileWithNoBackground";
+import TileWithNoBackground from "../common/Tiles/TileWithNoBackground";
 
 const AboutMe = () => {
   return (

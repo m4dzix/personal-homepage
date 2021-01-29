@@ -61,8 +61,4 @@ export const darkTheme = {
     makeIconBlue:
       "invert(0%) sepia(0%) saturate(0%) brightness(500%) contrast(100%)",
   },
-  filter: {
-    makeIconBlue:
-      "invert(0%) sepia(0%) saturate(0%) brightness(500%) contrast(100%)",
-  },
 };
