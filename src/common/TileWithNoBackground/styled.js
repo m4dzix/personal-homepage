@@ -117,28 +117,3 @@ export const List = styled.ul`
   margin: 56px 0;
   list-style: none;
 `;
-
-export const Item = styled.li`
-  font-size: 18px;
-  line-height: 1.4;
-  letter-spacing: 0.05em;
-  color: ${({ theme }) => theme.colors.text};
-`;
-
-export const Icon = styled.img`
-  filter: ${(props) =>
-    props.darkMode
-      ? "invert(0%) sepia(0%) saturate(0%) brightness(500%) contrast(100%)"
-      : "invert(10%) sepia(0%) saturate(0%) brightness(50%) contrast(100%)"};
-  transition: 0.3s;
-  &:hover {
-    filter: none;
-  }
-`;
-
-export const Link = styled.a`
-  color: ${({ theme }) => theme.colors.mainBlue};
-  line-height: 140%;
-  padding: 2px;
-  border-bottom: 1px solid rgba(3, 103, 216, 0.2);
-`;

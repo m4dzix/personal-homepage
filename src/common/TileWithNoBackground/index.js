@@ -1,15 +1,5 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import { selectDarkMode } from "../../projectsSlice";
 import message from "../Assets/message.svg";
-import githubIcon from "../Assets/lightMode/github.svg";
-import linkedinIcon from "../Assets/lightMode/linkedin.svg";
-import facebookIcon from "../Assets/lightMode/facebook.svg";
-import instagramIcon from "../Assets/lightMode/instagram.svg";
-import darkModeGithubIcon from "../Assets/darkMode/github.svg";
-import darkModeLinkedinIcon from "../Assets/darkMode/linkedin.svg";
-import darkModeFacebookIcon from "../Assets/darkMode/facebook.svg";
-import darkModeInstagramIcon from "../Assets/darkMode/instagram.svg";
 
 import {
   Container,
@@ -19,30 +9,26 @@ import {
   Description,
   Button,
   List,
-  Item,
   Inset,
-  Icon,
 } from "./styled";
 
 const TileWithNoBackground = ({
   inset,
   title,
+
   typeOfContent,
   aboutMe,
   contact,
+  bodyList,
 }) => {
-  const darkMode = useSelector(selectDarkMode);
-
   return (
     <Container aboutMe={aboutMe} contact={contact}>
       <Photo hidden={typeOfContent !== "aboutMe"}></Photo>
-      <div>
-        <Inset>{inset}</Inset>
-        <Title aboutMe={aboutMe} contact={contact}>
-          {title}
-        </Title>
-      </div>
 
+      <Inset>{inset}</Inset>
+      <Title aboutMe={aboutMe} contact={contact}>
+        {title}
+      </Title>
       <ContentContainer aboutMe={aboutMe} contact={contact}>
         {typeOfContent === "aboutMe" ? (
           <>
@@ -59,7 +45,6 @@ const TileWithNoBackground = ({
               rel="noreferrer noopener"
               target="_blank"
             >
-              {" "}
               <Button>
                 <img src={message} alt="Letter icon. Send message"></img> Hire
                 me
@@ -73,55 +58,7 @@ const TileWithNoBackground = ({
               opportunities. If you want to have your own website or application
               - please contact me. We can help each other
             </Description>
-            <List>
-              <Item>
-                <a
-                  href="https://github.com/m4dzix"
-                  rel="noreferrer noopener"
-                  target="_blank"
-                >
-                  <Icon
-                    darkMode={darkMode}
-                    src={!darkMode ? githubIcon : darkModeGithubIcon}
-                    alt=""
-                  ></Icon>
-                </a>
-              </Item>
-              <Item>
-                <a
-                  href="https://www.facebook.com/magda.piatkowska.146"
-                  rel="noreferrer noopener"
-                  target="_blank"
-                >
-                  {" "}
-                  <Icon
-                    darkMode={darkMode}
-                    src={!darkMode ? facebookIcon : darkModeFacebookIcon}
-                    alt=""
-                  ></Icon>
-                </a>
-              </Item>
-              <Item>
-                <a href="" rel="noreferrer noopener" target="_blank">
-                  {" "}
-                  <Icon
-                    darkMode={darkMode}
-                    src={!darkMode ? linkedinIcon : darkModeLinkedinIcon}
-                    alt=""
-                  ></Icon>
-                </a>{" "}
-              </Item>
-              <Item>
-                <a href="" rel="noreferrer noopener" target="_blank">
-                  {" "}
-                  <Icon
-                    darkMode={darkMode}
-                    src={!darkMode ? instagramIcon : darkModeInstagramIcon}
-                    alt=""
-                  ></Icon>
-                </a>{" "}
-              </Item>
-            </List>
+            <List>{bodyList}</List>
           </>
         )}
       </ContentContainer>

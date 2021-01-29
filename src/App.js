@@ -5,7 +5,7 @@ import AboutMe from "./features/AboutMe";
 import ListsOfSkills from "./features/ListsOfSkills";
 import Portfolio from "./features/Portfolio";
 import MyGithubProjects from "./features/MyGithubProjects";
-import Contact from "./features/Contact";
+import Contact from "./features/Contact/";
 import { selectDarkMode } from "./projectsSlice";
 import { useSelector } from "react-redux";
 import { GlobalStyle } from "./globalStyle";
