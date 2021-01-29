@@ -24,7 +24,7 @@ export const Container = styled.div`
 export const Title = styled.h1`
   grid-area: title;
   font-weight: 900;
-  color: ${({ theme }) => theme.colors.mainBlue};
+  color: ${({ theme }) => theme.colors.projectTitle};
   font-size: 24px;
   line-height: 36px;
   letter-spacing: 0.05em;
