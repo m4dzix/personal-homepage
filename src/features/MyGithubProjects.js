@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { selectProject, selectLoading, fetchProject } from "../projectsSlice";
-import Section from "../common/Section";
+import { StyledSection } from "../common/StyledSection";
 import GithubProjectsTile from "../common/GithubProjectsTile";
 import Loading from "../common/Loading";
 import Error from "../common/Error";
@@ -10,16 +10,15 @@ const MyGithubProjects = () => {
   const projects = useSelector(selectProject);
   const loading = useSelector(selectLoading);
   const dispatch = useDispatch();
-  console.log(projects);
   useEffect(() => {
     dispatch(fetchProject());
   }, [dispatch]);
 
   if (!loading && projects.length > 0) {
     return (
-      <Section
+      <StyledSection
         myGithubProjects={true}
-        body={projects.map((project) => {
+        children={projects.map((project) => {
           return (
             <GithubProjectsTile
               key={project.name}
@@ -32,7 +31,7 @@ const MyGithubProjects = () => {
             ></GithubProjectsTile>
           );
         })}
-      ></Section>
+      ></StyledSection>
     );
   } else if (!!loading) {
     return <Loading />;

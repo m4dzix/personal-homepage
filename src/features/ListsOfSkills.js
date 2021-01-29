@@ -1,25 +1,21 @@
 import React from "react";
-import Section from "../common/Section";
+import { StyledSection } from "../common/StyledSection";
 import SkillsTile from "../common/SkillsTile";
 
 const ListsOfSkills = () => {
   return (
-    <Section
-      body={
-        <>
-          <SkillsTile
-            mySkills={true}
-            title={"My Skillset includes"}
-            typeOfContent={"mySkills"}
-          ></SkillsTile>
-          <SkillsTile
-            skillsIWantToLearn={true}
-            title={"Skills I want to learn"}
-            typeOfContent={"skillsIWantToLearn"}
-          ></SkillsTile>
-        </>
-      }
-    ></Section>
+    <StyledSection>
+      <SkillsTile
+        mySkills={true}
+        title={"My Skillset includes"}
+        typeOfContent={"mySkills"}
+      ></SkillsTile>
+      <SkillsTile
+        skillsIWantToLearn={true}
+        title={"Skills I want to learn"}
+        typeOfContent={"skillsIWantToLearn"}
+      ></SkillsTile>
+    </StyledSection>
   );
 };
 
