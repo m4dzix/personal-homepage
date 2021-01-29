@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { selectProject, selectLoading, fetchProject } from "../projectsSlice";
 import Section from "../common/Section";
-import Tile from "../common/Tile";
+import GithubProjectsTile from "../common/GithubProjectsTile";
 import Loading from "../common/Loading";
 import Error from "../common/Error";
 
@@ -21,7 +21,7 @@ const MyGithubProjects = () => {
         myGithubProjects={true}
         body={projects.map((project) => {
           return (
-            <Tile
+            <GithubProjectsTile
               key={project.name}
               myGithubProjects={true}
               title={project.name}
@@ -29,7 +29,7 @@ const MyGithubProjects = () => {
               description={project.description}
               urlAdressToDemo={project.html_url}
               urlAdressToLive={`https://${project.owner.login}.github.io/${project.name}/`}
-            ></Tile>
+            ></GithubProjectsTile>
           );
         })}
       ></Section>

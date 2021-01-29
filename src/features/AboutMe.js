@@ -1,17 +1,17 @@
 import React from "react";
 import Section from "../common/Section";
-import Tile from "../common/Tile";
+import TileWithNoBackground from "../common/TileWithNoBackground";
 
 const AboutMe = () => {
   return (
     <Section
       body={
-        <Tile
+        <TileWithNoBackground
           aboutMe={true}
           inset={"this is"}
           title={"Magdalena Chęciński"}
           typeOfContent={"aboutMe"}
-        ></Tile>
+        ></TileWithNoBackground>
       }
     ></Section>
   );
