@@ -28,6 +28,7 @@ const Contact = () => {
                 href={mySocialMedia.urlAdress}
                 rel="noreferrer noopener"
                 target="_blank"
+                title={mySocialMedia.title}
               >
                 <Icon
                   src={mySocialMedia.socialMediaIcon()}

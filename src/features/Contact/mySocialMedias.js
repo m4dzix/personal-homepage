@@ -17,25 +17,29 @@ export const useSocialMedia = () => {
       socialMediaIcon: () => (!darkMode ? githubIcon : darkModeGithubIcon),
       urlAdress: "https://github.com/m4dzix",
       alt: "Link to my github",
+      title: "https://github.com",
     },
     {
       name: "facebook",
       socialMediaIcon: () => (!darkMode ? facebookIcon : darkModeFacebookIcon),
       urlAdress: "https://www.facebook.com/magda.piatkowska.146",
       alt: "Link to my facebook",
+      title: "www.facebook.com",
     },
     {
       name: "linkedin",
       socialMediaIcon: () => (!darkMode ? linkedinIcon : darkModeLinkedinIcon),
-      urlAdress: "",
+      urlAdress: "https://www.linkedin.com/",
       alt: "Link to my linkedin",
+      title: "https://www.linkedin.com/",
     },
     {
       name: "instagram",
       socialMediaIcon: () =>
         !darkMode ? instagramIcon : darkModeInstagramIcon,
-      urlAdress: "",
+      urlAdress: "https://www.instagram.com/madzix08/",
       alt: "Link to my instagram",
+      title: "https://www.instagram.com/",
     },
   ];
 };
