@@ -39,8 +39,7 @@ const TileWithNoBackground = ({
               target="_blank"
             >
               <Button>
-                <img src={message} alt="Letter icon. Send message"></img> Hire
-                me
+                <img src={message} alt="Letter icon. Send message" /> Hire me
               </Button>
             </a>
           </>

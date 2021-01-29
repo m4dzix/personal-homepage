@@ -7,7 +7,7 @@ const Portfolio = () => {
     <StyledSection>
       <Container>
         <Inset>
-          <img src={githubIcon} alt="Magdalena Checinski"></img>
+          <img src={githubIcon} alt="Magdalena Checinski" />
         </Inset>
         <Title>Portfolio</Title>
         <Subheader>My recent projects</Subheader>

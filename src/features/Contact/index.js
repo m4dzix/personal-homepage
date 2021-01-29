@@ -32,7 +32,7 @@ const Contact = () => {
                 <Icon
                   src={mySocialMedia.socialMediaIcon()}
                   alt={mySocialMedia.alt}
-                ></Icon>
+                />
               </a>
             </Item>
           );

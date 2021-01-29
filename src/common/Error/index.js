@@ -10,7 +10,7 @@ const Error = () => {
 
   return (
     <Container>
-      <img src={!darkMode ? errorIcon : darkModeErrorIcon} alt=""></img>
+      <img src={!darkMode ? errorIcon : darkModeErrorIcon} alt="" />
       <Subheader>Ooops! Something went wrong...</Subheader>
       <Text>
         Sorry, failed to load Github projects.
