@@ -1,7 +1,7 @@
 import React from "react";
 import { StyledSection } from "../../common/StyledSection";
 import { Item, Icon } from "./styled";
-import TileWithNoBackground from "../../common/TileWithNoBackground";
+import TileWithNoBackground from "../../common/Tiles/TileWithNoBackground";
 import { useSocialMedia } from "./mySocialMedias";
 
 const Contact = () => {

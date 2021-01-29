@@ -1,6 +1,6 @@
 import React from "react";
 import { StyledSection } from "../common/StyledSection";
-import SkillsTile from "../common/SkillsTile";
+import SkillsTile from "../common/Tiles/SkillsTile";
 
 const ListsOfSkills = () => {
   return (

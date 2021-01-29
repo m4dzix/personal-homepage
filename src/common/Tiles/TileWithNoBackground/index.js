@@ -1,5 +1,5 @@
 import React from "react";
-import message from "../Assets/message.svg";
+import message from "../../Assets/message.svg";
 import {
   Container,
   Photo,

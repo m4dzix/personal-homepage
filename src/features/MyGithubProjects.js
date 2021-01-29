@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { selectProject, selectLoading, fetchProject } from "../projectsSlice";
 import { StyledSection } from "../common/StyledSection";
-import GithubProjectsTile from "../common/GithubProjectsTile";
+import GithubProjectsTile from "../common/Tiles/GithubProjectsTile";
 import Loading from "../common/Loading";
 import Error from "../common/Error";
 
