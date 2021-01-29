@@ -27,7 +27,7 @@ const MyGithubProjects = () => {
               typeOfContent={"myGithubProjects"}
               description={project.description}
               urlAdressToDemo={project.html_url}
-              urlAdressToLive={`https://${project.owner.login}.github.io/${project.name}/`}
+              urlAdressToLive={project.homepage}
             ></GithubProjectsTile>
           );
         })}
