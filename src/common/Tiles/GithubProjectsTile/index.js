@@ -25,10 +25,24 @@ const GithubProjectsTile = ({
           <List>
             <Item>
               {" "}
-              Demo: <Link href={urlAdressToDemo}>{urlAdressToDemo}</Link>{" "}
+              Demo:{" "}
+              <Link
+                href={urlAdressToDemo}
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                {urlAdressToDemo}
+              </Link>{" "}
             </Item>
             <Item>
-              Live: <Link href={urlAdressToLive}>{urlAdressToLive}</Link>{" "}
+              Live:{" "}
+              <Link
+                href={urlAdressToLive}
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                {urlAdressToLive}
+              </Link>{" "}
             </Item>
           </List>
         </ContentContainer>
