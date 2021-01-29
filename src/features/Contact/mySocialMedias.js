@@ -21,20 +21,20 @@ export const useSocialMedia = () => {
     {
       name: "facebook",
       socialMediaIcon: () => (!darkMode ? facebookIcon : darkModeFacebookIcon),
-      urlAdress: "https://github.com/m4dzix",
+      urlAdress: "https://www.facebook.com/magda.piatkowska.146",
       alt: "Link to my facebook",
     },
     {
       name: "linkedin",
       socialMediaIcon: () => (!darkMode ? linkedinIcon : darkModeLinkedinIcon),
-      urlAdress: "https://github.com/m4dzix",
+      urlAdress: "",
       alt: "Link to my linkedin",
     },
     {
       name: "instagram",
       socialMediaIcon: () =>
         !darkMode ? instagramIcon : darkModeInstagramIcon,
-      urlAdress: "https://github.com/m4dzix",
+      urlAdress: "",
       alt: "Link to my instagram",
     },
   ];
