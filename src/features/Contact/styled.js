@@ -13,4 +13,7 @@ export const Icon = styled.img`
   &:hover {
     filter: none;
   }
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    width: 31.94px;
+  }
 `;
