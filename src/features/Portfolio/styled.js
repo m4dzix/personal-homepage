@@ -19,14 +19,12 @@ export const Title = styled.h1`
   color: ${({ theme }) => theme.colors.title};
   font-size: 30px;
   line-height: 36px;
-  letter-spacing: 0.05em;
   padding-bottom: 0px;
   margin: 12px 0 0 0;
 `;
 
 export const Subheader = styled.h2`
   font-size: 20px;
-  line-height: 1.4;
   color: ${({ theme }) => theme.colors.title};
   margin-top: 8px;
   font-weight: normal;

@@ -27,7 +27,6 @@ export const Title = styled.h1`
   color: ${({ theme }) => theme.colors.projectTitle};
   font-size: 24px;
   line-height: 36px;
-  letter-spacing: 0.05em;
   padding-bottom: 0px;
   margin: 0;
 `;
@@ -38,15 +37,11 @@ export const ContentContainer = styled.div`
   flex-direction: column;
   align-items: start;
   font-size: 18px;
-  line-height: 1.4;
   color: ${({ theme }) => theme.colors.text};
-  letter-spacing: 0.05em;
 `;
 
 export const Description = styled.p`
   font-size: 18px;
-  line-height: 1.4;
-  letter-spacing: 0.05em;
   color: ${({ theme }) => theme.colors.text};
   margin: 24px 0 0 0;
 `;
@@ -65,8 +60,6 @@ export const List = styled.ul`
 
 export const Item = styled.li`
   font-size: 18px;
-  line-height: 1.4;
-  letter-spacing: 0.05em;
   color: ${({ theme }) => theme.colors.text};
 `;
 

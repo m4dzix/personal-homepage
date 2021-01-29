@@ -13,7 +13,6 @@ export const Container = styled.div`
 export const Subheader = styled.h3`
   font-size: 24px;
   color: ${({ theme }) => theme.colors.title};
-  letter-spacing: 0.05em;
   margin: 23.16px 0 0 0;
 `;
 
@@ -22,7 +21,6 @@ export const Text = styled.p`
   color: ${({ theme }) => theme.colors.title};
   margin: 32px 0 0 0;
   text-align: center;
-  letter-spacing: 0.05em;
 `;
 
 export const GoToGithubButton = styled.a`
@@ -31,7 +29,6 @@ export const GoToGithubButton = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
-  letter-spacing: 0.05em;
   padding: 12px 16px;
   border-radius: 4px;
   background-color: ${({ theme }) => theme.colors.mainBlue};
