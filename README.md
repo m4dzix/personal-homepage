@@ -6,6 +6,18 @@ Below are two tables: the first with my skills and the second with the skills I 
 My projects section - contains projects that I have already done.
 The last section is contact me - email and social media
 
+## Technologies used:
+
+- HTML
+- REACT JS
+- Create react app
+- Styled-components
+- React-redux
+- Redux-saga
+- @reduxjs/toolkit
+- React-router
+- Fetching API
+
 ## Available Scripts
 
 In the project directory, you can run:
