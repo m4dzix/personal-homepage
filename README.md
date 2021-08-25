@@ -1,6 +1,22 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a portfolio site with my projects.
+At the top there is information about me - who I am and what I am learning.
+Below are two tables: the first with my skills and the second with the skills I want to learn.
+My projects section - contains projects that I have already done.
+The last section is contact me - email and social media
+
+## Technologies used:
+
+- HTML
+- REACT JS
+- Create react app
+- Styled-components
+- React-redux
+- Redux-saga
+- @reduxjs/toolkit
+- React-router
+- Fetching API
 
 ## Available Scripts
 
