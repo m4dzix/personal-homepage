@@ -17,7 +17,7 @@ export const MySkills = [
 ];
 export const SkillsIWantToLearn = [
   "JS classes",
-  "SCSS, SAS",
+  "SCSS, SASS",
   "WordPress",
   "Bootstrap",
   "Redux Thunk",
