@@ -16,10 +16,16 @@ export const MySkills = [
   "Scrum",
 ];
 export const SkillsIWantToLearn = [
+  "JS classes",
+  "SCSS, SAS",
+  "WordPress",
+  "Bootstrap",
+  "Redux Thunk",
   "React Context",
+  "React Native",
   "TypeScript",
   "Gatsby",
+  "Vue.js",
   "Node.js",
-  "JS classes",
   "Unit testing",
 ];
