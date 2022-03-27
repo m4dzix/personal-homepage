@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import myPhoto from "./image.jpg";
+import myPhoto from "../../Assets/myPhoto.jpeg";
 
 export const Container = styled.div`
   display: grid;
@@ -29,7 +29,7 @@ export const Container = styled.div`
 export const Photo = styled.div`
   grid-area: photo;
   background-image: url(${myPhoto});
-  background-position: center;
+  background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
   width: 398px;
